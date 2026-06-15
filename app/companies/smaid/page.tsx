@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
+import { BrandBadge } from "../../../components/BrandBadge";
+import { BrandSig } from "../../../components/BrandSig";
 
 export const metadata: Metadata = {
   title: "SMaid — Retail, Queue & Logistics Support",
@@ -87,7 +89,7 @@ export default function SMaidPage() {
             </Link>
             <div className="eyebrow">Retail, Queue & Logistics Support</div>
             <h1>SMaid</h1>
-            <span className="badge">A Fonia Labs Company</span>
+            <BrandBadge badge="A Fonia Labs Company" />
             <p className="wide-text">
               Making supermarket shopping, queueing, and delivery support easier.
             </p>
@@ -345,7 +347,7 @@ export default function SMaidPage() {
             </p>
           </div>
           <div>
-            <div className="footer-badge">SMaid is a Fonia Labs Company.</div>
+            <BrandSig badge="A Fonia Labs Company" />
           </div>
         </div>
       </section>

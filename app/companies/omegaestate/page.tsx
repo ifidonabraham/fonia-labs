@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
+import { BrandBadge } from "../../../components/BrandBadge";
+import { BrandSig } from "../../../components/BrandSig";
 
 export const metadata: Metadata = {
   title: "OmegaEstate — Property Technology",
@@ -87,7 +89,7 @@ export default function OmegaEstatePage() {
             </Link>
             <div className="eyebrow">Property Technology</div>
             <h1>OmegaEstate</h1>
-            <span className="badge">A Fonia Labs Company</span>
+            <BrandBadge badge="A Fonia Labs Company" />
             <p className="wide-text">
               Property discovery and real estate technology for a more organized property
               experience.
@@ -347,7 +349,7 @@ export default function OmegaEstatePage() {
             </p>
           </div>
           <div>
-            <div className="footer-badge">OmegaEstate is a Fonia Labs Company.</div>
+            <BrandSig badge="A Fonia Labs Company" />
           </div>
         </div>
       </section>

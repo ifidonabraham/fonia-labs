@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
+import { BrandBadge } from "../../../components/BrandBadge";
+import { BrandSig } from "../../../components/BrandSig";
 
 export const metadata: Metadata = {
   title: "SystemGuardian — System Protection & Performance",
@@ -87,7 +89,7 @@ export default function SystemGuardianPage() {
             </Link>
             <div className="eyebrow">System Protection & Performance</div>
             <h1>SystemGuardian</h1>
-            <span className="badge">A Fonia Labs Product</span>
+            <BrandBadge badge="A Fonia Labs Product" />
             <p className="wide-text">
               Protecting computers from overload, slowdown, and performance pressure.
             </p>
@@ -333,7 +335,7 @@ export default function SystemGuardianPage() {
             </p>
           </div>
           <div>
-            <div className="footer-badge">SystemGuardian is a Fonia Labs Product.</div>
+            <BrandSig badge="A Fonia Labs Product" />
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Company } from "../data/companies";
+import { BrandBadge } from "./BrandBadge";
 
 export function CompanyCard({ company }: { company: Company }) {
   const page = "/companies/" + company.slug;
@@ -11,7 +12,7 @@ export function CompanyCard({ company }: { company: Company }) {
       </div>
       <h3>{company.name}</h3>
       <p className="cc-desc">{company.tagline}</p>
-      <span className="badge">{company.badge}</span>
+      <BrandBadge badge={company.badge} />
       <div className="link-row">
         <Link className="btn primary" href={page}>
           Explore <span className="btn-arrow">→</span>

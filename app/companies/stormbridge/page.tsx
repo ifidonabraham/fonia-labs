@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
+import { BrandBadge } from "../../../components/BrandBadge";
+import { BrandSig } from "../../../components/BrandSig";
 
 export const metadata: Metadata = {
   title: "StormBridge — Weather & Emergency Intelligence",
@@ -89,7 +91,7 @@ export default function StormBridgePage() {
             </Link>
             <div className="eyebrow">Weather & Emergency Intelligence</div>
             <h1>StormBridge</h1>
-            <span className="badge">A Fonia Labs Company</span>
+            <BrandBadge badge="A Fonia Labs Company" />
             <p className="wide-text">
               Weather intelligence, disaster preparedness, and emergency support.
             </p>
@@ -365,7 +367,7 @@ export default function StormBridgePage() {
             </p>
           </div>
           <div>
-            <div className="footer-badge">StormBridge is a Fonia Labs Company.</div>
+            <BrandSig badge="A Fonia Labs Company" />
           </div>
         </div>
       </section>

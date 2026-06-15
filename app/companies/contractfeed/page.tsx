@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
+import { BrandBadge } from "../../../components/BrandBadge";
+import { BrandSig } from "../../../components/BrandSig";
 
 export const metadata: Metadata = {
   title: "ContractFeed — Contract & Opportunity Intelligence",
@@ -87,7 +89,7 @@ export default function ContractFeedPage() {
             </Link>
             <div className="eyebrow">Contract & Opportunity Intelligence</div>
             <h1>ContractFeed</h1>
-            <span className="badge">A Fonia Labs Company</span>
+            <BrandBadge badge="A Fonia Labs Company" />
             <p className="wide-text">
               Helping businesses discover, organize, and track contract opportunities.
             </p>
@@ -343,7 +345,7 @@ export default function ContractFeedPage() {
             </p>
           </div>
           <div>
-            <div className="footer-badge">ContractFeed is a Fonia Labs Company.</div>
+            <BrandSig badge="A Fonia Labs Company" />
           </div>
         </div>
       </section>

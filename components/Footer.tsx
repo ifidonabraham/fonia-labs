@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
+import { OCore } from "./OCore";
 
 const explore = [
   ["Companies", "/companies"],
@@ -9,7 +10,7 @@ const explore = [
   ["Contact", "/contact"]
 ];
 
-const ecosystem = [
+const coreAndFeatured = [
   ["FonTech", "/companies/fontech"],
   ["OmegaEstate", "/companies/omegaestate"],
   ["SMaid", "/companies/smaid"],
@@ -17,11 +18,20 @@ const ecosystem = [
   ["Seek", "/companies/seek"]
 ];
 
+const growthAndProducts = [
+  ["ContractFeed", "/companies/contractfeed"],
+  ["StormBridge", "/companies/stormbridge"],
+  ["ComplyIQ", "/companies/complyiq"],
+  ["UnilagFoodSpots", "/companies/unilagfoodspots"],
+  ["Deadline Dungeon", "/companies/deadline-dungeon"],
+  ["SystemGuardian", "/companies/systemguardian"]
+];
+
 export function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer-grid">
+        <div className="footer-grid footer-grid-wide">
           <div>
             <Logo />
             <p className="mt-md">
@@ -29,7 +39,13 @@ export function Footer() {
               that solve real-world problems.
             </p>
             <p className="footer-brandline">Where Ideas Become Companies.</p>
-            <span className="footer-badge">Part of the Fonia Labs Ecosystem</span>
+            <div className="footer-built">
+              <OCore size={22} />
+              <span>
+                <span className="footer-built-by">Proudly built by</span>
+                <span className="footer-built-name">FonTech — A Fonia Labs Company</span>
+              </span>
+            </div>
           </div>
 
           <div>
@@ -44,9 +60,20 @@ export function Footer() {
           </div>
 
           <div>
-            <h4>Ecosystem</h4>
+            <h4>Core & Featured</h4>
             <ul className="list compact">
-              {ecosystem.map(([label, href]) => (
+              {coreAndFeatured.map(([label, href]) => (
+                <li key={href}>
+                  <Link href={href}>{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4>Growth & Products</h4>
+            <ul className="list compact">
+              {growthAndProducts.map(([label, href]) => (
                 <li key={href}>
                   <Link href={href}>{label}</Link>
                 </li>

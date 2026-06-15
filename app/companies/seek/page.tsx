@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
+import { BrandBadge } from "../../../components/BrandBadge";
+import { BrandSig } from "../../../components/BrandSig";
 
 export const metadata: Metadata = {
   title: "Seek — Opportunity Discovery",
@@ -90,7 +92,7 @@ export default function SeekPage() {
             </Link>
             <div className="eyebrow">Opportunity Discovery</div>
             <h1>Seek</h1>
-            <span className="badge">A Fonia Labs Company</span>
+            <BrandBadge badge="A Fonia Labs Company" />
             <p className="wide-text">
               Discover, organize, and act on useful opportunities.
             </p>
@@ -347,7 +349,7 @@ export default function SeekPage() {
             </p>
           </div>
           <div>
-            <div className="footer-badge">Seek is a Fonia Labs Company.</div>
+            <BrandSig badge="A Fonia Labs Company" />
           </div>
         </div>
       </section>

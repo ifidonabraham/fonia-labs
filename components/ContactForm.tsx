@@ -1,19 +1,34 @@
 "use client";
 
 import { useState } from "react";
-import { companies } from "../data/companies";
 
 const CONTACT_EMAIL = "ifidonabraham249@gmail.com";
 
-const reasons = [
-  "General inquiry",
-  "Build with FonTech",
-  "Partnership",
-  "Product testing",
-  "Product feedback",
-  "Investment / strategic support",
-  "Media / speaking",
+const interestOptions = [
+  "I want to build with FonTech",
+  "I want to test a product",
+  "I want to partner with a company",
+  "I want to collaborate",
+  "I want to invest or support",
+  "I want to suggest an idea",
+  "I want general information",
   "Other"
+];
+
+const companyOptions = [
+  "Fonia Labs",
+  "FonTech",
+  "OmegaEstate",
+  "SMaid",
+  "Dokito",
+  "Seek",
+  "ContractFeed",
+  "StormBridge",
+  "ComplyIQ",
+  "UnilagFoodSpots",
+  "Deadline Dungeon",
+  "SystemGuardian",
+  "Not sure yet"
 ];
 
 export function ContactForm() {
@@ -29,15 +44,14 @@ export function ContactForm() {
       `Email: ${get("email")}`,
       `Phone: ${get("phone")}`,
       `Organization: ${get("organization")}`,
-      `Reason for contact: ${get("reason")}`,
-      `Company / product of interest: ${get("company")}`,
-      `Links / attachments: ${get("links")}`,
+      `Interested in: ${get("interest")}`,
+      `Company of interest: ${get("company")}`,
       "",
       "Message:",
       get("message")
     ].join("\n");
 
-    const subject = `Contact — ${get("reason")} (${get("company")})`;
+    const subject = `Contact — ${get("interest")} (${get("company")})`;
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
@@ -60,47 +74,44 @@ export function ContactForm() {
           <input id="ct-phone" name="phone" placeholder="Optional" />
         </div>
         <div className="field">
-          <label htmlFor="ct-org">Organization / company</label>
+          <label htmlFor="ct-org">Organization or company name</label>
           <input id="ct-org" name="organization" placeholder="Optional" />
         </div>
         <div className="field">
-          <label htmlFor="ct-reason">Reason for contact <span className="req">*</span></label>
-          <select id="ct-reason" name="reason" required defaultValue="">
-            <option value="" disabled>
-              Select a reason
-            </option>
-            {reasons.map((reason) => (
-              <option key={reason}>{reason}</option>
+          <label htmlFor="ct-interest">What are you interested in? <span className="req">*</span></label>
+          <select id="ct-interest" name="interest" required defaultValue="">
+            <option value="" disabled>Select an option</option>
+            {interestOptions.map((opt) => (
+              <option key={opt}>{opt}</option>
             ))}
           </select>
         </div>
         <div className="field">
-          <label htmlFor="ct-company">Company / product of interest</label>
-          <select id="ct-company" name="company" defaultValue="Not sure">
-            <option>Fonia Labs</option>
-            {companies.map((company) => (
-              <option key={company.slug}>{company.name}</option>
+          <label htmlFor="ct-company">Which company are you contacting us about?</label>
+          <select id="ct-company" name="company" defaultValue="Fonia Labs">
+            {companyOptions.map((opt) => (
+              <option key={opt}>{opt}</option>
             ))}
-            <option>Not sure</option>
           </select>
         </div>
         <div className="field full">
-          <label htmlFor="ct-links">Links / attachments</label>
-          <input id="ct-links" name="links" placeholder="Portfolio, website, or document links (optional)" />
-        </div>
-        <div className="field full">
           <label htmlFor="ct-message">Message <span className="req">*</span></label>
-          <textarea id="ct-message" name="message" required placeholder="How can Fonia Labs help?" />
+          <textarea
+            id="ct-message"
+            name="message"
+            required
+            placeholder="Tell us who you are, what you are interested in, and how you would like to connect with Fonia Labs."
+          />
         </div>
       </div>
 
       <div className="form-actions">
         <button className="btn primary" type="submit">
-          Send Message
+          Send Message <span className="btn-arrow">→</span>
         </button>
         {sent ? (
           <span className="form-success">
-            Your email app should now open with your message ready to send.
+            Your email app should now open with your message ready to send to Fonia Labs.
           </span>
         ) : (
           <p className="form-note">Submitting opens your email app addressed to Fonia Labs.</p>

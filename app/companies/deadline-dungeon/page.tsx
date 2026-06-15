@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
+import { BrandBadge } from "../../../components/BrandBadge";
+import { BrandSig } from "../../../components/BrandSig";
 
 export const metadata: Metadata = {
   title: "Deadline Dungeon — Game & Productivity Experience",
@@ -82,7 +84,7 @@ export default function DeadlineDungeonPage() {
             </Link>
             <div className="eyebrow">Game & Productivity Experience</div>
             <h1>Deadline Dungeon</h1>
-            <span className="badge">A Fonia Labs Product</span>
+            <BrandBadge badge="A Fonia Labs Product" />
             <p className="wide-text">
               A game-inspired experience built around deadlines, focus, and task completion.
             </p>
@@ -336,7 +338,7 @@ export default function DeadlineDungeonPage() {
             </p>
           </div>
           <div>
-            <div className="footer-badge">Deadline Dungeon is a Fonia Labs Product.</div>
+            <BrandSig badge="A Fonia Labs Product" />
           </div>
         </div>
       </section>

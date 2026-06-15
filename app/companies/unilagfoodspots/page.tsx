@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
+import { BrandBadge } from "../../../components/BrandBadge";
+import { BrandSig } from "../../../components/BrandSig";
 
 export const metadata: Metadata = {
   title: "UnilagFoodSpots — Campus & Community Product",
@@ -80,7 +82,7 @@ export default function UnilagFoodSpotsPage() {
             </Link>
             <div className="eyebrow">Campus & Community Product</div>
             <h1>UnilagFoodSpots</h1>
-            <span className="badge">A Fonia Labs Product</span>
+            <BrandBadge badge="A Fonia Labs Product" />
             <p className="wide-text">
               Helping students and visitors find food spots around UNILAG.
             </p>
@@ -335,7 +337,7 @@ export default function UnilagFoodSpotsPage() {
             </p>
           </div>
           <div>
-            <div className="footer-badge">UnilagFoodSpots is a Fonia Labs Product.</div>
+            <BrandSig badge="A Fonia Labs Product" />
           </div>
         </div>
       </section>

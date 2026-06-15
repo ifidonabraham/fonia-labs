@@ -3,6 +3,8 @@ import Link from "next/link";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
 import { CTA } from "../../../components/CTA";
+import { BrandBadge } from "../../../components/BrandBadge";
+import { BrandSig } from "../../../components/BrandSig";
 
 export const metadata: Metadata = {
   title: "FonTech — Software Production & Digital Services",
@@ -135,7 +137,7 @@ export default function FonTechPage() {
             </Link>
             <div className="eyebrow">Software Production & Digital Services</div>
             <h1>FonTech</h1>
-            <span className="badge">A Fonia Labs Company</span>
+            <BrandBadge badge="A Fonia Labs Company" />
             <p className="wide-text">
               Building websites, apps, platforms, and digital products for businesses.
             </p>
@@ -422,7 +424,7 @@ export default function FonTechPage() {
       {/* Parent badge */}
       <section className="section tight">
         <div className="container">
-          <div className="footer-badge">FonTech is a Fonia Labs Company.</div>
+          <BrandSig badge="A Fonia Labs Company" />
           <p className="muted-line" style={{ marginTop: 8 }}>
             Built by FonTech — A Fonia Labs Company.
           </p>

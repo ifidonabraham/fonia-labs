@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
+import { BrandBadge } from "../../../components/BrandBadge";
+import { BrandSig } from "../../../components/BrandSig";
 
 export const metadata: Metadata = {
   title: "ComplyIQ — Compliance & Risk Intelligence",
@@ -89,7 +91,7 @@ export default function ComplyIQPage() {
             </Link>
             <div className="eyebrow">Compliance & Risk Intelligence</div>
             <h1>ComplyIQ</h1>
-            <span className="badge">A Fonia Labs Company</span>
+            <BrandBadge badge="A Fonia Labs Company" />
             <p className="wide-text">
               Helping businesses understand compliance, risk, and digital responsibility.
             </p>
@@ -364,7 +366,7 @@ export default function ComplyIQPage() {
             </p>
           </div>
           <div>
-            <div className="footer-badge">ComplyIQ is a Fonia Labs Company.</div>
+            <BrandSig badge="A Fonia Labs Company" />
           </div>
         </div>
       </section>

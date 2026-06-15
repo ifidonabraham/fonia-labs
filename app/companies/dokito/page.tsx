@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
+import { BrandBadge } from "../../../components/BrandBadge";
+import { BrandSig } from "../../../components/BrandSig";
 
 export const metadata: Metadata = {
   title: "Dokito — Health Technology",
@@ -88,7 +90,7 @@ export default function DokitoPage() {
             </Link>
             <div className="eyebrow">Health Technology</div>
             <h1>Dokito</h1>
-            <span className="badge">A Fonia Labs Company</span>
+            <BrandBadge badge="A Fonia Labs Company" />
             <p className="wide-text">
               Digital health access, support, and care navigation.
             </p>
@@ -361,7 +363,7 @@ export default function DokitoPage() {
             </p>
           </div>
           <div>
-            <div className="footer-badge">Dokito is a Fonia Labs Company.</div>
+            <BrandSig badge="A Fonia Labs Company" />
           </div>
         </div>
       </section>
