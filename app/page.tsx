@@ -17,7 +17,7 @@ export default function Home() {
             <p className="wide-text">Fonia Labs is a global innovation group building companies, platforms, and products that solve real-world problems.</p>
             <p>Founded and built by Ifidon Abraham, Fonia Labs creates and grows ventures across software, property, health, retail, compliance, opportunity discovery, community systems, productivity, and future industries.</p>
             <div className="actions">
-              <Link className="btn primary" href="/companies">Explore Companies</Link>
+              <Link className="btn primary" href="/brands">Explore Companies</Link>
               <Link className="btn" href="/about">About Fonia Labs</Link>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function Home() {
         <div className="container">
           <div className="section-head">
             <div><div className="eyebrow">More Ventures</div><h2>Growth companies and labs products.</h2></div>
-            <Link className="btn" href="/companies">View All</Link>
+            <Link className="btn" href="/brands">View All</Link>
           </div>
           <div className="grid cols-3">{other.map((company) => <CompanyCard key={company.slug} company={company} />)}</div>
         </div>
