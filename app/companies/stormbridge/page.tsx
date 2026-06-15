@@ -108,7 +108,7 @@ export default function StormBridgePage() {
             <div className="actions" style={{ marginTop: 24 }}>
               <a
                 className="btn primary"
-                href="https://stormbridge.vercel.app"
+                href="https://stormbrigde.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -322,7 +322,7 @@ export default function StormBridgePage() {
             <div className="actions" style={{ marginTop: 18 }}>
               <a
                 className="btn primary"
-                href="https://stormbridge.vercel.app"
+                href="https://stormbrigde.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
               >

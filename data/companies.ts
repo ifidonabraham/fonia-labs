@@ -245,7 +245,7 @@ export const companies: Company[] = [
     tagline: "Weather intelligence and disaster preparedness support.",
     description:
       "StormBridge is built for weather intelligence, disaster preparedness, risk awareness, emergency reporting, and community support during environmental or safety-related events.",
-    url: "https://stormbridge.vercel.app",
+    url: "https://stormbrigde.vercel.app",
     tier: "Growth Company",
     problem:
       "Disaster preparedness often fails because people do not have the right information at the right time.",
