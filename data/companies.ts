@@ -1,4 +1,9 @@
-export type Tier = "Core Company" | "Featured Company" | "Growth Company" | "Labs Product";
+export type Tier =
+  | "Core Company"
+  | "Featured Company"
+  | "Growth Venture"
+  | "Community Product"
+  | "Labs Product";
 
 export type Company = {
   slug: string;
@@ -26,10 +31,10 @@ export const companies: Company[] = [
     name: "FonTech",
     category: "Software Production & Digital Services",
     status: "Active Company",
-    badge: "A Fonia Labs Company",
+    badge: "A FonAI Labs Company",
     tagline: "Building websites, apps, platforms, and digital products for businesses.",
     description:
-      "FonTech is the software production and digital services company under Fonia Labs. It builds premium websites, mobile applications, web platforms, dashboards, product designs, and digital systems for businesses, organizations, brands, and institutions.",
+      "FonTech is the software production and digital services company under FonAI Labs. It builds premium websites, mobile applications, web platforms, dashboards, product designs, and digital systems for businesses, organizations, brands, and institutions.",
     url: "https://fontech-site.vercel.app",
     tier: "Core Company",
     problem:
@@ -69,23 +74,22 @@ export const companies: Company[] = [
     collaboration:
       "Websites, apps, platforms, design, client projects, and digital systems built for businesses and organizations.",
     screenshotSlots: ["Homepage", "Portfolio website", "Client project mockup", "Dashboard", "Mobile view"],
-    note: "Built by FonTech — A Fonia Labs Company."
+    note: "Built by FonTech — A FonAI Labs Company."
   },
   {
     slug: "omegaestate",
     name: "OmegaEstate",
     category: "Property Technology",
     status: "Featured Company",
-    badge: "A Fonia Labs Company",
-    tagline:
-      "Property discovery and real estate technology for a more organized property experience.",
+    badge: "A FonAI Labs Company",
+    tagline: "Property discovery and real estate technology.",
     description:
-      "OmegaEstate focuses on real estate discovery, property listings, and property management technology, giving people a cleaner and more organized way to find and trust property.",
+      "OmegaEstate is a property technology company focused on making real estate discovery, property listings, and property management more organized and accessible.",
     url: "https://omegaestate.vercel.app",
     tier: "Featured Company",
-    problem: "Property discovery is often scattered, slow, and difficult to trust.",
+    problem: "Finding property, managing listings, and connecting buyers or renters with agents is often scattered, slow, and unstructured.",
     solution:
-      "OmegaEstate provides a cleaner and more organized digital property discovery experience.",
+      "OmegaEstate provides a digital property platform where users can explore listings, view property details, and connect with real estate opportunities through a cleaner, more organized experience.",
     users: [
       "Property seekers",
       "Tenants",
@@ -97,12 +101,12 @@ export const companies: Company[] = [
     ],
     features: [
       "Property listings",
-      "Search",
+      "Search and discovery",
       "Property details",
-      "Agent visibility",
+      "Real estate contact flow",
       "Map/location support",
-      "Responsive experience",
-      "Inquiry/contact flow"
+      "Agent visibility",
+      "Responsive experience"
     ],
     roadmap: ["Improve listings", "Strengthen filters", "Add stronger agent tools"],
     collaboration:
@@ -114,10 +118,10 @@ export const companies: Company[] = [
     name: "SMaid",
     category: "Retail, Queue & Logistics Support",
     status: "Featured Company",
-    badge: "A Fonia Labs Company",
+    badge: "A FonAI Labs Company",
     tagline: "Making supermarket shopping, queueing, and delivery support easier.",
     description:
-      "SMaid provides digital support for supermarket and retail experiences, including queue support, shopping assistance, delivery coordination, and workflow support.",
+      "SMaid is built to support supermarkets, shoppers, and delivery workflows by improving how people queue, shop, request support, and manage logistics around retail experiences.",
     url: "https://smaid.vercel.app",
     tier: "Featured Company",
     problem:
@@ -152,10 +156,10 @@ export const companies: Company[] = [
     name: "Dokito",
     category: "Health Technology",
     status: "Featured Company",
-    badge: "A Fonia Labs Company",
+    badge: "A FonAI Labs Company",
     tagline: "Digital health access, support, and care navigation.",
     description:
-      "Dokito provides a digital platform for health support, health records, facility discovery, emergency access, and care navigation.",
+      "Dokito is a health technology platform designed to improve access to health support, health records, facility discovery, emergency flows, and digital care experiences.",
     url: "https://dokito.vercel.app",
     tier: "Featured Company",
     problem:
@@ -196,58 +200,16 @@ export const companies: Company[] = [
       "Dokito supports health access and care navigation. It does not replace professional medical diagnosis, treatment, or emergency medical care."
   },
   {
-    slug: "seek",
-    name: "Seek",
-    category: "Opportunity Discovery",
-    status: "Active Company",
-    badge: "A Fonia Labs Company",
-    tagline: "Discover, organize, and act on useful opportunities.",
-    description:
-      "Seek provides a digital platform for discovering, organizing, and tracking useful opportunities across education, work, funding, programs, competitions, and growth.",
-    url: "https://seek-beryl.vercel.app",
-    tier: "Featured Company",
-    problem:
-      "Opportunities are everywhere, but they are often scattered, difficult to track, and easy to miss.",
-    solution:
-      "Seek provides a digital platform for discovering, organizing, and tracking useful opportunities across education, work, funding, programs, competitions, and growth.",
-    users: [
-      "Students",
-      "Job seekers",
-      "Founders",
-      "Entrepreneurs",
-      "Creators",
-      "Professionals",
-      "Researchers",
-      "Freelancers",
-      "Grant seekers",
-      "Scholarship applicants",
-      "Program applicants"
-    ],
-    features: [
-      "Opportunity discovery",
-      "Categories",
-      "Deadline awareness",
-      "Save and track",
-      "Dashboard",
-      "Application support direction",
-      "Mobile-friendly experience"
-    ],
-    roadmap: ["Improve listing quality", "Add saved tracking", "Add personalized feeds"],
-    collaboration:
-      "Opportunities, scholarships, jobs, funding, programs, and growth discovery.",
-    screenshotSlots: ["Opportunity dashboard", "Listing", "Details", "Saved opportunities", "Mobile view"]
-  },
-  {
     slug: "contractfeed",
     name: "ContractFeed",
     category: "Contract & Opportunity Intelligence",
-    status: "Growth Company",
-    badge: "A Fonia Labs Company",
-    tagline: "Helping businesses discover, organize, and track contract opportunities.",
+    status: "Growth Venture",
+    badge: "A FonAI Labs Venture",
+    tagline: "Helping businesses discover and track contract opportunities.",
     description:
-      "ContractFeed provides a digital platform for discovering and tracking contract opportunities, procurement information, tenders, business openings, and opportunity-related updates.",
+      "ContractFeed helps businesses, suppliers, and professionals discover contract opportunities, procurement information, and business openings in a more organized way.",
     url: "https://contractfeed.vercel.app",
-    tier: "Growth Company",
+    tier: "Growth Venture",
     problem:
       "Businesses often miss opportunities because contract information is scattered, difficult to track, poorly organized, or discovered too late.",
     solution:
@@ -278,13 +240,13 @@ export const companies: Company[] = [
     slug: "stormbridge",
     name: "StormBridge",
     category: "Weather & Emergency Intelligence",
-    status: "Growth Company",
-    badge: "A Fonia Labs Company",
-    tagline: "Weather intelligence, disaster preparedness, and emergency support.",
+    status: "Growth Venture",
+    badge: "A FonAI Labs Venture",
+    tagline: "Weather intelligence and disaster preparedness support.",
     description:
-      "StormBridge provides weather intelligence, risk awareness, disaster preparedness, community reports, alerts, and emergency support.",
+      "StormBridge is built for weather intelligence, disaster preparedness, risk awareness, emergency reporting, and community support during environmental or safety-related events.",
     url: "https://stormbridge.vercel.app",
-    tier: "Growth Company",
+    tier: "Growth Venture",
     problem:
       "Disaster preparedness often fails because people do not have the right information at the right time.",
     solution:
@@ -321,16 +283,58 @@ export const companies: Company[] = [
       "StormBridge supports weather awareness and preparedness. It does not replace official emergency services or government warnings."
   },
   {
+    slug: "seek",
+    name: "Seek",
+    category: "Opportunity Discovery",
+    status: "Growth Venture",
+    badge: "A FonAI Labs Venture",
+    tagline: "Discover, track, and act on useful opportunities.",
+    description:
+      "Seek is an opportunity discovery system designed to help users find, organize, and act on opportunities across education, work, business, funding, and personal growth.",
+    url: "https://seek-beryl.vercel.app",
+    tier: "Growth Venture",
+    problem:
+      "Opportunities are everywhere, but they are often scattered, difficult to track, and easy to miss.",
+    solution:
+      "Seek provides a digital platform for discovering, organizing, and tracking useful opportunities across education, work, funding, programs, competitions, and growth.",
+    users: [
+      "Students",
+      "Job seekers",
+      "Founders",
+      "Entrepreneurs",
+      "Creators",
+      "Professionals",
+      "Researchers",
+      "Freelancers",
+      "Grant seekers",
+      "Scholarship applicants",
+      "Program applicants"
+    ],
+    features: [
+      "Opportunity discovery",
+      "Categories",
+      "Deadline awareness",
+      "Save and track",
+      "Dashboard",
+      "Application support direction",
+      "Mobile-friendly experience"
+    ],
+    roadmap: ["Improve listing quality", "Add saved tracking", "Add personalized feeds"],
+    collaboration:
+      "Opportunities, scholarships, jobs, funding, programs, and growth discovery.",
+    screenshotSlots: ["Opportunity dashboard", "Listing", "Details", "Saved opportunities", "Mobile view"]
+  },
+  {
     slug: "complyiq",
     name: "ComplyIQ",
     category: "Compliance & Risk Intelligence",
-    status: "Growth Company",
-    badge: "A Fonia Labs Company",
+    status: "Growth Venture",
+    badge: "A FonAI Labs Venture",
     tagline: "Helping businesses understand compliance, risk, and digital responsibility.",
     description:
-      "ComplyIQ provides compliance awareness, website risk intelligence, data collection review, digital operations assessment, and structured business guidance.",
+      "ComplyIQ is built to support businesses with compliance awareness, website risk intelligence, digital operations review, and structured guidance for safer business systems.",
     url: "https://complyiq99.vercel.app",
-    tier: "Growth Company",
+    tier: "Growth Venture",
     problem:
       "Many organizations use websites, forms, user data, cookies, scripts, dashboards, and digital tools without fully understanding the compliance and risk responsibilities attached to them.",
     solution:
@@ -365,12 +369,12 @@ export const companies: Company[] = [
     name: "UnilagFoodSpots",
     category: "Campus & Community Product",
     status: "Community Product",
-    badge: "A Fonia Labs Product",
-    tagline: "Helping students and visitors find food spots around UNILAG.",
+    badge: "A FonAI Labs Product",
+    tagline: "Find food spots around UNILAG.",
     description:
-      "UnilagFoodSpots provides a simple digital product for discovering food spots around the University of Lagos.",
+      "UnilagFoodSpots is a community product that helps students and visitors discover food spots around the University of Lagos.",
     url: "https://unilagfoodspots.vercel.app",
-    tier: "Labs Product",
+    tier: "Community Product",
     problem:
       "Students and visitors often need quick information about food spots around campus, but discovery depends on word of mouth or random movement.",
     solution:
@@ -400,10 +404,10 @@ export const companies: Company[] = [
     name: "Deadline Dungeon",
     category: "Game & Productivity Experience",
     status: "Labs Product",
-    badge: "A Fonia Labs Product",
-    tagline: "A game-inspired experience built around deadlines, focus, and task completion.",
+    badge: "A FonAI Labs Project",
+    tagline: "A game-inspired experience built around deadlines and focus.",
     description:
-      "Deadline Dungeon explores how game mechanics, challenge, progress, and urgency can make task completion feel more engaging.",
+      "Deadline Dungeon is a creative product that turns deadlines, focus, and productivity pressure into a game-like experience.",
     url: "https://deadline-dungeon-phi.vercel.app",
     tier: "Labs Product",
     problem:
@@ -436,10 +440,10 @@ export const companies: Company[] = [
     name: "SystemGuardian",
     category: "System Protection & Performance",
     status: "Labs Product",
-    badge: "A Fonia Labs Product",
-    tagline: "Protecting computers from overload, slowdown, and performance pressure.",
+    badge: "A FonAI Labs Project",
+    tagline: "Protecting computers from overload, slowdown, and performance failure.",
     description:
-      "SystemGuardian monitors resource usage, detects dangerous performance spikes, identifies heavy processes, and helps users respond before the system becomes unstable.",
+      "SystemGuardian is a system protection concept designed to monitor device performance, detect resource pressure, and help prevent CPU, memory, or system overload.",
     tier: "Labs Product",
     problem:
       "Computers can become slow, overloaded, or unresponsive when too many applications, background processes, or heavy tasks are running at the same time.",
@@ -478,26 +482,31 @@ export const companies: Company[] = [
 export const tiers: Tier[] = [
   "Core Company",
   "Featured Company",
-  "Growth Company",
+  "Growth Venture",
+  "Community Product",
   "Labs Product"
 ];
 
 export const tierMeta: Record<Tier, { label: string; description: string }> = {
   "Core Company": {
     label: "Core Company",
-    description: "The software production engine that builds and powers the ecosystem."
+    description: "The software production engine that builds and powers the FonAI Labs ecosystem."
   },
   "Featured Company": {
     label: "Featured Companies",
-    description: "Active companies leading the Fonia Labs ecosystem across key industries."
+    description: "Active companies leading the FonAI Labs ecosystem across key industries."
   },
-  "Growth Company": {
-    label: "Growth Companies",
-    description: "Ventures building intelligence platforms for business, weather, and compliance."
+  "Growth Venture": {
+    label: "Growth Ventures",
+    description: "Ventures building intelligence platforms across business, weather, compliance, and opportunity discovery."
+  },
+  "Community Product": {
+    label: "Community Products",
+    description: "Focused community products that serve specific groups and open the door to future industries."
   },
   "Labs Product": {
-    label: "Community & Labs Products",
-    description: "Focused products and experiments that open the door to future industries."
+    label: "Labs Products",
+    description: "Creative experiments and tools built under the FonAI Labs innovation umbrella."
   }
 };
 

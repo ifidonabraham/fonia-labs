@@ -6,24 +6,26 @@ import { OCore } from "../components/OCore";
 import { CTA } from "../components/CTA";
 
 const featured = [...companiesByTier("Core Company"), ...companiesByTier("Featured Company")];
-const growth = companiesByTier("Growth Company");
+const growth = companiesByTier("Growth Venture");
+const community = companiesByTier("Community Product");
 const labs = companiesByTier("Labs Product");
+const ecosystem = [...growth, ...community, ...labs];
 
 const pillars = [
   {
     n: "01",
     title: "Create",
-    text: "We identify real problems and shape them into product and company concepts."
+    text: "We identify real problems and shape them into clear product ideas, company concepts, and practical solutions."
   },
   {
     n: "02",
     title: "Build",
-    text: "We develop websites, applications, platforms, systems, and digital products."
+    text: "We develop websites, applications, platforms, systems, and digital products that can be tested, used, and improved in the real world."
   },
   {
     n: "03",
     title: "Grow",
-    text: "We support the strongest products as they evolve into companies."
+    text: "We support the strongest products as they evolve into companies, ventures, and long-term platforms under the Fonia Labs ecosystem."
   }
 ];
 
@@ -45,9 +47,11 @@ export default function Home() {
               products that solve real-world problems.
             </p>
             <p className="muted-line">
-              Fonia Labs creates and grows ventures across software, property, health,
-              retail, compliance, opportunity discovery, community systems, productivity,
-              and future industries.
+              We create, grow, and house ventures across technology, business, property,
+              health, logistics, compliance, education, community systems, and future
+              industries. Our work begins with ideas, develops into products, and grows into
+              companies designed to serve people, businesses, institutions, and communities
+              globally.
             </p>
             <div className="actions">
               <Link className="btn primary" href="/companies">
@@ -93,6 +97,10 @@ export default function Home() {
               Our mission is to design, build, and grow products, platforms, and companies
               that make life, business, and institutions work better globally.
             </p>
+            <p style={{ marginTop: 16 }}>
+              Fonia Labs exists to turn useful ideas into working systems, and working
+              systems into companies that can create value across industries.
+            </p>
             <div className="grid cols-3 mt-md">
               {pillars.map((pillar) => (
                 <div className="card pillar" key={pillar.n}>
@@ -106,13 +114,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Fonia Labs */}
+      <section className="section tight">
+        <div className="container split">
+          <div>
+            <div className="eyebrow">About Fonia Labs</div>
+            <h2>A parent group for bold ideas, working products, and future companies.</h2>
+          </div>
+          <div>
+            <p className="lead">
+              Fonia Labs is more than a software brand. It is a parent innovation group
+              designed to give rise to companies.
+            </p>
+            <p style={{ marginTop: 16 }}>
+              Every company under Fonia Labs begins with a problem, a vision, and a product.
+              Some companies are built to serve businesses. Some are built for communities.
+              Some are built for institutions. Others are designed as experiments that can
+              grow into larger ventures.
+            </p>
+            <p style={{ marginTop: 16 }}>
+              The goal is simple: build useful things, test them in the real world, grow what
+              works, and create companies that can last.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Featured companies */}
       <section className="section">
         <div className="container">
           <SectionHeader
             eyebrow="Featured Companies"
             title="Companies growing under Fonia Labs."
-            text="The leading companies and active ventures currently positioned in the Fonia Labs ecosystem."
+            text="These are some of the leading companies and platforms currently growing under the Fonia Labs ecosystem."
             action={
               <Link className="btn" href="/companies">
                 View All Companies
@@ -127,32 +161,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Growth companies */}
+      {/* Ecosystem */}
       <section className="section tight">
         <div className="container">
           <SectionHeader
-            eyebrow="Growth Companies"
-            title="Ventures building toward scale."
-            text="Intelligence platforms growing across business, weather, and compliance."
+            eyebrow="The Fonia Labs Ecosystem"
+            title="Ventures, products, and experiments."
+            text="Fonia Labs houses a growing ecosystem of companies, ventures, and products across different industries and problem areas."
           />
           <div className="grid cols-3">
-            {growth.map((company) => (
-              <CompanyCard key={company.slug} company={company} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Labs products */}
-      <section className="section tight">
-        <div className="container">
-          <SectionHeader
-            eyebrow="Community & Labs Products"
-            title="Focused products and experiments."
-            text="Smaller products that solve specific problems and open the door to future industries."
-          />
-          <div className="grid cols-3">
-            {labs.map((company) => (
+            {ecosystem.map((company) => (
               <CompanyCard key={company.slug} company={company} />
             ))}
           </div>
@@ -164,7 +182,7 @@ export default function Home() {
         <div className="container">
           <SectionHeader
             eyebrow="How Fonia Labs Works"
-            title="Idea → Product → Platform → Company → Growth"
+            title="From idea to company."
             text="Fonia Labs starts with real problems, builds products around them, tests those products with users, and grows the strongest ideas into companies."
           />
           <div className="flow">
@@ -176,9 +194,39 @@ export default function Home() {
             ))}
           </div>
           <p className="muted-line mt-md">
-            Some ideas become full companies. Some become platforms. Some remain focused
-            products. Others become experiments that open the door to future industries.
+            This process allows the ecosystem to stay flexible. Some ideas become full
+            companies. Some become platforms. Some remain focused products. Others become
+            experiments that open the door to future industries.
           </p>
+        </div>
+      </section>
+
+      {/* Collaboration */}
+      <section className="section tight">
+        <div className="container split">
+          <div>
+            <div className="eyebrow">Collaborate</div>
+            <h2>Build, test, partner, or collaborate.</h2>
+          </div>
+          <div>
+            <p className="lead">
+              Fonia Labs is open to testers, collaborators, partners, early users, and
+              supporters who want to help improve products, test platforms, contribute skills,
+              or explore business opportunities.
+            </p>
+            <p style={{ marginTop: 16 }}>
+              Each company has its own journey, roadmap, and collaboration needs. Explore the
+              companies to see where you can test, partner, support, or build with us.
+            </p>
+            <div className="actions" style={{ marginTop: 24 }}>
+              <Link className="btn primary" href="/collaborate">
+                Explore Opportunities <span className="btn-arrow">→</span>
+              </Link>
+              <Link className="btn" href="/contact">
+                Contact Fonia Labs
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -191,23 +239,32 @@ export default function Home() {
           </div>
           <div>
             <p className="lead">
-              Fonia Labs was founded and built by Ifidon Abraham with the vision of turning
-              real-world problems into useful products, platforms, and companies.
+              Fonia Labs was founded by Ifidon Abraham with a vision to build companies that
+              solve practical problems across industries.
             </p>
-            <p>
-              Instead of allowing useful ideas to remain scattered or unfinished, the goal
-              is to shape them into products, test them with users, and grow the strongest
-              ones into companies.
+            <p style={{ marginTop: 16 }}>
+              From software platforms to future business ventures, the goal is to create
+              systems that serve people, businesses, institutions, and communities globally.
             </p>
+            <p style={{ marginTop: 16 }}>
+              Fonia Labs is built on the belief that ideas should not remain ideas. They
+              should be shaped, tested, improved, and grown into companies that create real
+              value.
+            </p>
+            <div className="actions" style={{ marginTop: 24 }}>
+              <Link className="btn" href="/about">
+                Read About Fonia Labs
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       <CTA
-        title="Build, test, or grow with Fonia Labs."
-        text="Fonia Labs is open to testers, collaborators, partners, contributors, businesses, and supporters who can help build, test, improve, or grow the ecosystem."
-        primary={{ label: "Collaborate With Us", href: "/collaborate" }}
-        secondary={{ label: "Contact Fonia Labs", href: "/contact" }}
+        title="Explore the companies growing under Fonia Labs."
+        text="From property technology and health platforms to retail support, compliance intelligence, opportunity discovery, and digital services, Fonia Labs is building an ecosystem of companies for the future."
+        primary={{ label: "View Companies", href: "/companies" }}
+        secondary={{ label: "Partner With Us", href: "/collaborate" }}
       />
     </main>
   );
