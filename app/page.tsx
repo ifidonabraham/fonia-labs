@@ -5,7 +5,6 @@ import { SectionHeader } from "../components/SectionHeader";
 import { OCore } from "../components/OCore";
 import { CTA } from "../components/CTA";
 import { MarketingShowcase } from "../components/MarketingShowcase";
-import { Reveal } from "../components/Reveal";
 
 const featured = [...companiesByTier("Core Company"), ...companiesByTier("Featured Company")];
 const growth = companiesByTier("Growth Company");
@@ -156,10 +155,8 @@ export default function Home() {
             }
           />
           <div className="grid cols-3">
-            {featured.map((company, i) => (
-              <Reveal key={company.slug} delay={(i % 3) * 90}>
-                <CompanyCard company={company} />
-              </Reveal>
+            {featured.map((company) => (
+              <CompanyCard key={company.slug} company={company} />
             ))}
           </div>
         </div>
@@ -186,10 +183,8 @@ export default function Home() {
             text="Fonia Labs houses a growing ecosystem of companies, ventures, and products across different industries and problem areas."
           />
           <div className="grid cols-3">
-            {ecosystem.map((company, i) => (
-              <Reveal key={company.slug} delay={(i % 3) * 90}>
-                <CompanyCard company={company} />
-              </Reveal>
+            {ecosystem.map((company) => (
+              <CompanyCard key={company.slug} company={company} />
             ))}
           </div>
         </div>

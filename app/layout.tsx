@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { CardSpotlight } from "../components/CardSpotlight";
+import { ScrollReveal } from "../components/ScrollReveal";
 
 const description =
   "Fonia Labs is a global innovation group building companies, platforms, and products that solve real-world problems.";
@@ -54,6 +56,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         {children}
         <Footer />
+        <CardSpotlight />
+        <ScrollReveal />
       </body>
     </html>
   );
