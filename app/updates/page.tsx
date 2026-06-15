@@ -1,17 +1,56 @@
+import type { Metadata } from "next";
 import { PageHero } from "../../components/PageHero";
+import { SectionHeader } from "../../components/SectionHeader";
+import { updates, updateCategories } from "../../data/updates";
 
-const updates = [
-  "Fonia Labs begins its public ecosystem rollout.",
-  "FonTech becomes the software production company under Fonia Labs.",
-  "Seek is recognized as an active opportunity discovery company.",
-  "Testers and collaborators are invited across the ecosystem."
-];
+export const metadata: Metadata = {
+  title: "Updates",
+  description:
+    "Follow the progress of Fonia Labs as ideas become products, products become platforms, and platforms grow into companies."
+};
 
-export default function Page() {
+export default function UpdatesPage() {
   return (
     <main>
-      <PageHero eyebrow="Updates" title="Building in public, growing with purpose." text="Follow the progress of Fonia Labs as ideas become products, products become platforms, and platforms grow into companies." />
-      <section className="section"><div className="container grid cols-2">{updates.map((item) => <article className="card" key={item}><h3>{item}</h3><p>Company update from the Fonia Labs ecosystem.</p></article>)}</div></section>
+      <PageHero
+        eyebrow="Updates"
+        title="Updates"
+        text="Follow the progress of Fonia Labs as ideas become products, products become platforms, and platforms grow into companies."
+      />
+
+      {/* Categories */}
+      <section className="section tight">
+        <div className="container">
+          <div className="eyebrow">Update Categories</div>
+          <div className="chips mt-sm">
+            {updateCategories.map((category) => (
+              <span className="chip" key={category}>
+                {category}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="section tight">
+        <div className="container">
+          <SectionHeader
+            eyebrow="Latest"
+            title="Building in public, growing with purpose."
+            text="The Updates page tracks company announcements, product milestones, build logs, testing opportunities, partnership updates, and founder notes."
+          />
+          <div className="timeline">
+            {updates.map((update) => (
+              <article className="timeline-item" key={update.title}>
+                <span className="ti-cat">{update.category}</span>
+                <h3>{update.title}</h3>
+                <p>{update.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

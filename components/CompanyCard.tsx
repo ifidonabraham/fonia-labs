@@ -5,13 +5,22 @@ export function CompanyCard({ company }: { company: Company }) {
   const page = "/companies/" + company.slug;
   return (
     <article className="card company-card">
-      <span className="badge">{company.status}</span>
-      <p className="meta">{company.category}</p>
+      <div className="cc-top">
+        <p className="meta">{company.category}</p>
+        <span className="status-pill">{company.status}</span>
+      </div>
       <h3>{company.name}</h3>
-      <p>{company.tagline}</p>
+      <p className="cc-desc">{company.tagline}</p>
+      <span className="badge">{company.badge}</span>
       <div className="link-row">
-        <Link className="btn primary" href={page}>Explore</Link>
-        {company.url ? <a className="btn" href={company.url}>Live Site</a> : null}
+        <Link className="btn primary" href={page}>
+          Explore <span className="btn-arrow">→</span>
+        </Link>
+        {company.url ? (
+          <a className="btn" href={company.url} target="_blank" rel="noopener noreferrer">
+            Live Site
+          </a>
+        ) : null}
       </div>
     </article>
   );
