@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { companies, getCompany } from "../../../data/companies";
 import { OCore } from "../../../components/OCore";
 import { BrandBadge } from "../../../components/BrandBadge";
+import { getScreenshots } from "../../../lib/screenshots";
 
 export function generateStaticParams() {
   return companies.map((item) => ({ slug: item.slug }));
@@ -21,6 +22,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 export default function CompanyPage({ params }: { params: { slug: string } }) {
   const company = getCompany(params.slug);
   if (!company) notFound();
+
+  const shots = getScreenshots(company.slug);
+  const hasShots = shots.length > 0;
 
   return (
     <main>
@@ -126,15 +130,26 @@ export default function CompanyPage({ params }: { params: { slug: string } }) {
             <div className="sh-copy">
               <div className="eyebrow">Product Screenshots</div>
               <h2>A look at {company.name}</h2>
-              <p>Polished placeholders — real product screenshots will be added here.</p>
+              <p>
+                {hasShots
+                  ? `Inside ${company.name}.`
+                  : "Polished placeholders — real product screenshots will be added here."}
+              </p>
             </div>
           </div>
           <div className="shot-grid">
-            {company.screenshotSlots.map((slot) => (
-              <div className="shot" key={slot}>
-                {slot}
-              </div>
-            ))}
+            {hasShots
+              ? shots.map((src, i) => (
+                  <div className="shot shot--image" key={src}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={src} alt={`${company.name} screenshot ${i + 1}`} loading="lazy" />
+                  </div>
+                ))
+              : company.screenshotSlots.map((slot) => (
+                  <div className="shot" key={slot}>
+                    {slot}
+                  </div>
+                ))}
           </div>
         </div>
       </section>

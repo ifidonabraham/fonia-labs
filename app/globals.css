@@ -511,7 +511,10 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
   color: var(--muted);
   font-size: 13px;
   font-weight: 500;
+  overflow: hidden;
 }
+.shot--image { padding: 0; }
+.shot--image img { width: 100%; height: 100%; object-fit: cover; }
 
 .kv { display: grid; gap: 14px; }
 .kv-row { display: flex; gap: 14px; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--line); }
