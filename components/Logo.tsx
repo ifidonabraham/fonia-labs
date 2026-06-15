@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { OCore } from "./OCore";
 
-/**
- * Fonia Labs primary lockup: O-core mark + "Fonia" wordmark with the
- * accent on "ia", and a spaced "LABS" sub-line — matching the brand guide.
- */
 export function Logo({ size = 38 }: { size?: number }) {
   return (
     <Link href="/" className="logo-lockup" aria-label="Fonia Labs — home">
@@ -13,7 +9,11 @@ export function Logo({ size = 38 }: { size?: number }) {
         <span className="logo-word">
           Fon<span className="lw-blue">ia</span>
         </span>
-        <span className="logo-sub">LABS</span>
+        <span className="logo-sub">
+          <span className="logo-rule" />
+          LABS
+          <span className="logo-rule" />
+        </span>
       </span>
     </Link>
   );

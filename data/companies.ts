@@ -1,7 +1,7 @@
 export type Tier =
   | "Core Company"
   | "Featured Company"
-  | "Growth Venture"
+  | "Growth Company"
   | "Community Product"
   | "Labs Product";
 
@@ -203,13 +203,13 @@ export const companies: Company[] = [
     slug: "contractfeed",
     name: "ContractFeed",
     category: "Contract & Opportunity Intelligence",
-    status: "Growth Venture",
-    badge: "A Fonia Labs Venture",
+    status: "Growth Company",
+    badge: "A Fonia Labs Company",
     tagline: "Helping businesses discover and track contract opportunities.",
     description:
       "ContractFeed helps businesses, suppliers, and professionals discover contract opportunities, procurement information, and business openings in a more organized way.",
     url: "https://contractfeed.vercel.app",
-    tier: "Growth Venture",
+    tier: "Growth Company",
     problem:
       "Businesses often miss opportunities because contract information is scattered, difficult to track, poorly organized, or discovered too late.",
     solution:
@@ -240,13 +240,13 @@ export const companies: Company[] = [
     slug: "stormbridge",
     name: "StormBridge",
     category: "Weather & Emergency Intelligence",
-    status: "Growth Venture",
-    badge: "A Fonia Labs Venture",
+    status: "Growth Company",
+    badge: "A Fonia Labs Company",
     tagline: "Weather intelligence and disaster preparedness support.",
     description:
       "StormBridge is built for weather intelligence, disaster preparedness, risk awareness, emergency reporting, and community support during environmental or safety-related events.",
     url: "https://stormbridge.vercel.app",
-    tier: "Growth Venture",
+    tier: "Growth Company",
     problem:
       "Disaster preparedness often fails because people do not have the right information at the right time.",
     solution:
@@ -286,13 +286,13 @@ export const companies: Company[] = [
     slug: "seek",
     name: "Seek",
     category: "Opportunity Discovery",
-    status: "Growth Venture",
-    badge: "A Fonia Labs Venture",
+    status: "Active Company",
+    badge: "A Fonia Labs Company",
     tagline: "Discover, track, and act on useful opportunities.",
     description:
       "Seek is an opportunity discovery system designed to help users find, organize, and act on opportunities across education, work, business, funding, and personal growth.",
     url: "https://seek-beryl.vercel.app",
-    tier: "Growth Venture",
+    tier: "Featured Company",
     problem:
       "Opportunities are everywhere, but they are often scattered, difficult to track, and easy to miss.",
     solution:
@@ -328,13 +328,13 @@ export const companies: Company[] = [
     slug: "complyiq",
     name: "ComplyIQ",
     category: "Compliance & Risk Intelligence",
-    status: "Growth Venture",
-    badge: "A Fonia Labs Venture",
+    status: "Growth Company",
+    badge: "A Fonia Labs Company",
     tagline: "Helping businesses understand compliance, risk, and digital responsibility.",
     description:
       "ComplyIQ is built to support businesses with compliance awareness, website risk intelligence, digital operations review, and structured guidance for safer business systems.",
     url: "https://complyiq99.vercel.app",
-    tier: "Growth Venture",
+    tier: "Growth Company",
     problem:
       "Many organizations use websites, forms, user data, cookies, scripts, dashboards, and digital tools without fully understanding the compliance and risk responsibilities attached to them.",
     solution:
@@ -482,7 +482,7 @@ export const companies: Company[] = [
 export const tiers: Tier[] = [
   "Core Company",
   "Featured Company",
-  "Growth Venture",
+  "Growth Company",
   "Community Product",
   "Labs Product"
 ];
@@ -496,9 +496,9 @@ export const tierMeta: Record<Tier, { label: string; description: string }> = {
     label: "Featured Companies",
     description: "Active companies leading the Fonia Labs ecosystem across key industries."
   },
-  "Growth Venture": {
-    label: "Growth Ventures",
-    description: "Ventures building intelligence platforms across business, weather, compliance, and opportunity discovery."
+  "Growth Company": {
+    label: "Growth Companies",
+    description: "Companies building intelligence platforms across business, weather, compliance, and opportunity discovery."
   },
   "Community Product": {
     label: "Community Products",

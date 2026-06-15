@@ -6,7 +6,7 @@ import { OCore } from "../components/OCore";
 import { CTA } from "../components/CTA";
 
 const featured = [...companiesByTier("Core Company"), ...companiesByTier("Featured Company")];
-const growth = companiesByTier("Growth Venture");
+const growth = companiesByTier("Growth Company");
 const community = companiesByTier("Community Product");
 const labs = companiesByTier("Labs Product");
 const ecosystem = [...growth, ...community, ...labs];

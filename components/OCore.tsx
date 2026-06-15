@@ -1,9 +1,5 @@
-/**
- * O-Core — the Fonia Labs origin mark.
- * The "O" represents the origin: the point where ideas begin and
- * companies grow. A broken outer ring with a glowing blue core.
- */
 export function OCore({ size = 40 }: { size?: number }) {
+  const id = "oc";
   return (
     <svg
       className="ocore"
@@ -15,44 +11,64 @@ export function OCore({ size = 40 }: { size?: number }) {
       aria-label="Fonia Labs O-core mark"
     >
       <defs>
-        <linearGradient id="oc-ring" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#e2e8f0" />
-          <stop offset="0.5" stopColor="#94a3b8" />
-          <stop offset="1" stopColor="#475569" />
-        </linearGradient>
-        <radialGradient id="oc-core" cx="50%" cy="42%" r="60%">
-          <stop offset="0%" stopColor="#bae6fd" />
-          <stop offset="45%" stopColor="#38bdf8" />
-          <stop offset="100%" stopColor="#1d4ed8" />
+        <radialGradient id={`${id}-orb`} cx="40%" cy="35%" r="65%">
+          <stop offset="0%" stopColor="#e0f2fe" />
+          <stop offset="28%" stopColor="#7dd3fc" />
+          <stop offset="62%" stopColor="#2563eb" />
+          <stop offset="100%" stopColor="#1e3a8a" />
         </radialGradient>
+        <radialGradient id={`${id}-halo`} cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.55" />
+          <stop offset="60%" stopColor="#38bdf8" stopOpacity="0.15" />
+          <stop offset="100%" stopColor="#38bdf8" stopOpacity="0" />
+        </radialGradient>
+        <filter id={`${id}-glow`} x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.5" result="blur" />
+          <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
       </defs>
 
-      {/* Outer broken ring (two arcs with gaps) */}
-      <path
-        d="M32 7 A25 25 0 0 1 57 32"
-        stroke="url(#oc-ring)"
-        strokeWidth="5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M32 57 A25 25 0 0 1 7 32"
-        stroke="url(#oc-ring)"
-        strokeWidth="5"
-        strokeLinecap="round"
-      />
-
-      {/* Inner accent arc */}
-      <path
-        d="M44 20 A17 17 0 0 1 44 44"
-        stroke="#38bdf8"
+      {/* Outer broken ring — gaps at NW / NE / SE / SW */}
+      <circle
+        cx="32" cy="32" r="28"
+        stroke="#cbd5e1"
+        strokeWidth="3.2"
         strokeOpacity="0.55"
-        strokeWidth="3"
         strokeLinecap="round"
+        strokeDasharray="38.5 5.5"
+        transform="rotate(-45 32 32)"
       />
 
-      {/* Glowing core */}
-      <circle cx="32" cy="32" r="9" fill="url(#oc-core)" />
-      <circle cx="32" cy="32" r="9" fill="none" stroke="#7dd3fc" strokeOpacity="0.35" strokeWidth="1.5" />
+      {/* Mid ring */}
+      <circle
+        cx="32" cy="32" r="21"
+        stroke="#94a3b8"
+        strokeWidth="2.4"
+        strokeOpacity="0.45"
+        strokeLinecap="round"
+        strokeDasharray="28.5 4.5"
+        transform="rotate(-45 32 32)"
+      />
+
+      {/* Inner ring — cyan tint */}
+      <circle
+        cx="32" cy="32" r="14"
+        stroke="#38bdf8"
+        strokeWidth="1.8"
+        strokeOpacity="0.5"
+        strokeLinecap="round"
+        strokeDasharray="18 3.8"
+        transform="rotate(-45 32 32)"
+      />
+
+      {/* Ambient halo behind orb */}
+      <circle cx="32" cy="32" r="12" fill={`url(#${id}-halo)`} />
+
+      {/* Core orb */}
+      <circle cx="32" cy="32" r="7.5" fill={`url(#${id}-orb)`} filter={`url(#${id}-glow)`} />
+
+      {/* Specular highlight */}
+      <ellipse cx="29.5" cy="28.5" rx="2.8" ry="1.8" fill="white" fillOpacity="0.5" transform="rotate(-30 29.5 28.5)" />
     </svg>
   );
 }

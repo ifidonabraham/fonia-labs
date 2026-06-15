@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const core = companiesByTier("Core Company");
 const featured = companiesByTier("Featured Company");
-const growth = companiesByTier("Growth Venture");
+const growth = companiesByTier("Growth Company");
 const communityAndLabs = [
   ...companiesByTier("Community Product"),
   ...companiesByTier("Labs Product")
@@ -24,7 +24,7 @@ const filters = [
   "All",
   "Core Company",
   "Featured Companies",
-  "Growth Ventures",
+  "Growth Companies",
   "Community Products",
   "Labs Products"
 ];
@@ -109,11 +109,11 @@ export default function CompaniesPage() {
         </div>
       </section>
 
-      {/* Growth Ventures */}
+      {/* Growth Companies */}
       <section className="section tight">
         <div className="container">
           <SectionHeader
-            eyebrow="Growth Ventures"
+            eyebrow="Growth Companies"
             title="Building toward scale."
             text="These companies and platforms are growing within the Fonia Labs ecosystem and are built around strong problem areas with long-term potential."
           />

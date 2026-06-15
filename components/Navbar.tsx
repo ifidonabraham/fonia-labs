@@ -4,16 +4,48 @@ import { useState } from "react";
 import Link from "next/link";
 import { Logo } from "./Logo";
 
-const links = [
-  ["Companies", "/companies"],
+const topLinks = [
   ["About", "/about"],
   ["Collaborate", "/collaborate"],
   ["Updates", "/updates"],
   ["Contact", "/contact"]
 ];
 
+const companyGroups = [
+  {
+    label: "Core Company",
+    items: [{ name: "FonTech", slug: "fontech" }]
+  },
+  {
+    label: "Featured Companies",
+    items: [
+      { name: "OmegaEstate", slug: "omegaestate" },
+      { name: "SMaid", slug: "smaid" },
+      { name: "Dokito", slug: "dokito" },
+      { name: "Seek", slug: "seek" }
+    ]
+  },
+  {
+    label: "Growth Companies",
+    items: [
+      { name: "ContractFeed", slug: "contractfeed" },
+      { name: "StormBridge", slug: "stormbridge" },
+      { name: "ComplyIQ", slug: "complyiq" }
+    ]
+  },
+  {
+    label: "Community & Labs",
+    items: [
+      { name: "UnilagFoodSpots", slug: "unilagfoodspots" },
+      { name: "Deadline Dungeon", slug: "deadline-dungeon" },
+      { name: "SystemGuardian", slug: "systemguardian" }
+    ]
+  }
+];
+
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [mobileCompaniesOpen, setMobileCompaniesOpen] = useState(false);
 
   return (
     <header className="nav">
@@ -22,7 +54,39 @@ export function Navbar() {
           <Logo />
 
           <nav className="nav-links" aria-label="Main navigation">
-            {links.map(([label, href]) => (
+            <div className="nav-dropdown-wrap">
+              <Link href="/companies" className="nav-dropdown-trigger">
+                Companies
+                <svg className="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="2 4 6 8 10 4" />
+                </svg>
+              </Link>
+              <div className="nav-dropdown">
+                <div className="nav-dropdown-inner">
+                  {companyGroups.map((group) => (
+                    <div className="nav-dropdown-group" key={group.label}>
+                      <div className="nav-dropdown-label">{group.label}</div>
+                      {group.items.map((item) => (
+                        <Link
+                          key={item.slug}
+                          href={`/companies/${item.slug}`}
+                          className="nav-dropdown-item"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="nav-dropdown-footer">
+                  <Link href="/companies" className="nav-dropdown-all">
+                    View all companies →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {topLinks.map(([label, href]) => (
               <Link href={href} key={href}>
                 {label}
               </Link>
@@ -58,7 +122,37 @@ export function Navbar() {
         </div>
 
         <nav className={"nav-mobile" + (open ? " open" : "")} aria-label="Mobile navigation">
-          {links.map(([label, href]) => (
+          <div className="nav-mobile-companies">
+            <button
+              className="nav-mobile-companies-toggle"
+              onClick={() => setMobileCompaniesOpen((v) => !v)}
+            >
+              Companies
+              <svg className={"nav-chevron" + (mobileCompaniesOpen ? " rotated" : "")} width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="2 4 6 8 10 4" />
+              </svg>
+            </button>
+            {mobileCompaniesOpen && (
+              <div className="nav-mobile-companies-list">
+                <Link href="/companies" className="nav-mobile-companies-all" onClick={() => setOpen(false)}>
+                  All companies
+                </Link>
+                {companyGroups.flatMap((group) =>
+                  group.items.map((item) => (
+                    <Link
+                      key={item.slug}
+                      href={`/companies/${item.slug}`}
+                      onClick={() => setOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))
+                )}
+              </div>
+            )}
+          </div>
+
+          {topLinks.map(([label, href]) => (
             <Link href={href} key={href} onClick={() => setOpen(false)}>
               {label}
             </Link>
