@@ -1,2 +1,0 @@
-import Link from "next/link";import type {Company} from "@/data/companies";
-export function CompanyCard({company}:{company:Company}){return <article className="card company-card"><span className="badge">{company.status}</span><p className="meta">{company.category}</p><h3>{company.name}</h3><p>{company.tagline}</p><div className="link-row"><Link className="btn primary" href={`/companies/${company.slug}`}>Explore</Link>{company.url?<a className="btn" href={company.url} target="_blank" rel="noreferrer">Live Site</a>:null}</div></article>}
