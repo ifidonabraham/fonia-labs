@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
 import { BrandBadge } from "../../../components/BrandBadge";
@@ -116,12 +117,15 @@ export default function SMaidPage() {
               </Link>
             </div>
           </div>
-          <div className="mock-shot">
-            <div>
-              <OCore size={88} />
-              <h2 style={{ marginTop: 18 }}>SMaid</h2>
-              <p>Featured Company</p>
-            </div>
+          <div className="mock-shot" style={{ padding: 0, overflow: "hidden" }}>
+            <Image
+              src="/screenshots/smaid/main.png"
+              alt="SMaid product screenshot"
+              width={1280}
+              height={800}
+              priority
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
           </div>
         </div>
       </section>
@@ -246,9 +250,15 @@ export default function SMaidPage() {
             text="Screenshots from the live platform showing how SMaid supports queue flow, shopping requests, and logistics."
           />
           <div className="shot-grid">
-            {screenshots.map((slot) => (
-              <div className="shot" key={slot}>
-                {slot}
+            {screenshots.map((label, i) => (
+              <div className="shot" key={label} style={{ padding: 0, overflow: "hidden" }}>
+                <Image
+                  src={`/screenshots/smaid/shot-${i + 1}.png`}
+                  alt={label}
+                  width={1280}
+                  height={800}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
               </div>
             ))}
           </div>

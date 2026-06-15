@@ -333,7 +333,7 @@ export const companies: Company[] = [
     tagline: "Helping businesses understand compliance, risk, and digital responsibility.",
     description:
       "ComplyIQ is built to support businesses with compliance awareness, website risk intelligence, digital operations review, and structured guidance for safer business systems.",
-    url: "https://complyiq99.vercel.app",
+    url: "https://complyiq-gilt.vercel.app",
     tier: "Growth Company",
     problem:
       "Many organizations use websites, forms, user data, cookies, scripts, dashboards, and digital tools without fully understanding the compliance and risk responsibilities attached to them.",

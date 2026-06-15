@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { OCore } from "../../../components/OCore";
 import { SectionHeader } from "../../../components/SectionHeader";
 import { CTA } from "../../../components/CTA";
@@ -166,12 +167,15 @@ export default function FonTechPage() {
               </Link>
             </div>
           </div>
-          <div className="mock-shot">
-            <div>
-              <OCore size={88} />
-              <h2 style={{ marginTop: 18 }}>FonTech</h2>
-              <p>Active Company</p>
-            </div>
+          <div className="mock-shot" style={{ padding: 0, overflow: "hidden" }}>
+            <Image
+              src="/screenshots/fontech/main.png"
+              alt="FonTech product screenshot"
+              width={1280}
+              height={800}
+              priority
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
           </div>
         </div>
       </section>
@@ -334,9 +338,23 @@ export default function FonTechPage() {
             text="FonTech's work is connected to the wider Fonia Labs ecosystem. Product examples include business websites, real estate platforms, health platforms, opportunity systems, dashboards, and digital tools."
           />
           <div className="shot-grid">
-            {screenshots.map((slot) => (
-              <div className="shot" key={slot}>
-                {slot}
+            {[
+              { src: "/screenshots/fontech/shot-1.png",       label: "FonTech website" },
+              { src: "/screenshots/portfolio/shot-1.png",      label: "Portfolio website" },
+              { src: "/screenshots/omegaestate/shot-1.png",    label: "OmegaEstate" },
+              { src: "/screenshots/dokito/shot-1.png",         label: "Dokito" },
+              { src: "/screenshots/smaid/shot-1.png",          label: "SMaid" },
+              { src: "/screenshots/contractfeed/shot-1.png",   label: "ContractFeed" },
+              { src: "/screenshots/stormbridge/shot-1.png",    label: "StormBridge" },
+            ].map(({ src, label }) => (
+              <div className="shot" key={label} style={{ padding: 0, overflow: "hidden" }}>
+                <Image
+                  src={src}
+                  alt={label}
+                  width={1280}
+                  height={800}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
               </div>
             ))}
           </div>
