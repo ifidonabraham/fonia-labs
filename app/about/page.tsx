@@ -6,7 +6,7 @@ import { CTA } from "../../components/CTA";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "FonAI Labs is a global innovation group building companies, platforms, and products that solve real-world problems."
+    "Fonia Labs is a global innovation group building companies, platforms, and products that solve real-world problems."
 };
 
 const whatWeBuild = [
@@ -34,9 +34,9 @@ export default function AboutPage() {
     <main>
       <PageHero
         eyebrow="About"
-        title="About FonAI Labs"
-        text="FonAI Labs is a global innovation group building companies, platforms, and products that solve real-world problems."
-        support="FonAI Labs creates, grows, and houses companies across technology, business, property, health, logistics, compliance, education, community systems, and future industries. Our work begins with ideas, develops into products, and grows into companies designed to serve people, businesses, institutions, and communities globally."
+        title="About Fonia Labs"
+        text="Fonia Labs is a global innovation group building companies, platforms, and products that solve real-world problems."
+        support="Fonia Labs creates, grows, and houses companies across technology, business, property, health, logistics, compliance, education, community systems, and future industries. Our work begins with ideas, develops into products, and grows into companies designed to serve people, businesses, institutions, and communities globally."
       />
 
       {/* Who we are */}
@@ -48,7 +48,7 @@ export default function AboutPage() {
           </div>
           <div>
             <p className="lead">
-              FonAI Labs is not just a software brand, project list, or personal portfolio.
+              Fonia Labs is not just a software brand, project list, or personal portfolio.
               It is a company-building ecosystem designed to turn useful ideas into
               structured products, working platforms, and future companies.
             </p>
@@ -82,7 +82,7 @@ export default function AboutPage() {
           <SectionHeader
             eyebrow="What We Build"
             title="Companies across many industries."
-            text="FonAI Labs builds and houses companies and products spanning software, property, health, retail, intelligence platforms, and community systems."
+            text="Fonia Labs builds and houses companies and products spanning software, property, health, retail, intelligence platforms, and community systems."
           />
           <div className="grid cols-3">
             {whatWeBuild.map(([area, via]) => (
@@ -99,7 +99,7 @@ export default function AboutPage() {
       <section className="section tight">
         <div className="container split">
           <div>
-            <div className="eyebrow">How FonAI Labs Works</div>
+            <div className="eyebrow">How Fonia Labs Works</div>
             <h2>From problem to company.</h2>
           </div>
           <div>
@@ -120,16 +120,16 @@ export default function AboutPage() {
           <div className="card">
             <div className="eyebrow">Founder Vision</div>
             <p>
-              FonAI Labs was founded and built by <strong>Ifidon Abraham</strong> with a
+              Fonia Labs was founded and built by <strong>Ifidon Abraham</strong> with a
               vision to build companies that solve practical problems across industries.
               From software platforms to future business ventures, the goal is to create
               systems that serve people, businesses, institutions, and communities globally.
             </p>
           </div>
           <div className="card">
-            <div className="eyebrow">Why FonAI Labs Exists</div>
+            <div className="eyebrow">Why Fonia Labs Exists</div>
             <p>
-              FonAI Labs exists to give structure to ideas. Instead of allowing useful ideas
+              Fonia Labs exists to give structure to ideas. Instead of allowing useful ideas
               to remain scattered or unfinished, the goal is to shape them into products,
               test them with users, and grow the strongest ones into companies.
             </p>
@@ -138,8 +138,8 @@ export default function AboutPage() {
       </section>
 
       <CTA
-        title="Explore the FonAI Labs ecosystem."
-        text="See the companies, ventures, and products being built and grown under FonAI Labs."
+        title="Explore the Fonia Labs ecosystem."
+        text="See the companies, ventures, and products being built and grown under Fonia Labs."
         primary={{ label: "View Companies", href: "/companies" }}
         secondary={{ label: "Collaborate", href: "/collaborate" }}
       />

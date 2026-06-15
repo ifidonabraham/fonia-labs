@@ -31,10 +31,10 @@ export const companies: Company[] = [
     name: "FonTech",
     category: "Software Production & Digital Services",
     status: "Active Company",
-    badge: "A FonAI Labs Company",
+    badge: "A Fonia Labs Company",
     tagline: "Building websites, apps, platforms, and digital products for businesses.",
     description:
-      "FonTech is the software production and digital services company under FonAI Labs. It builds premium websites, mobile applications, web platforms, dashboards, product designs, and digital systems for businesses, organizations, brands, and institutions.",
+      "FonTech is the software production and digital services company under Fonia Labs. It builds premium websites, mobile applications, web platforms, dashboards, product designs, and digital systems for businesses, organizations, brands, and institutions.",
     url: "https://fontech-site.vercel.app",
     tier: "Core Company",
     problem:
@@ -74,14 +74,14 @@ export const companies: Company[] = [
     collaboration:
       "Websites, apps, platforms, design, client projects, and digital systems built for businesses and organizations.",
     screenshotSlots: ["Homepage", "Portfolio website", "Client project mockup", "Dashboard", "Mobile view"],
-    note: "Built by FonTech — A FonAI Labs Company."
+    note: "Built by FonTech — A Fonia Labs Company."
   },
   {
     slug: "omegaestate",
     name: "OmegaEstate",
     category: "Property Technology",
     status: "Featured Company",
-    badge: "A FonAI Labs Company",
+    badge: "A Fonia Labs Company",
     tagline: "Property discovery and real estate technology.",
     description:
       "OmegaEstate is a property technology company focused on making real estate discovery, property listings, and property management more organized and accessible.",
@@ -118,7 +118,7 @@ export const companies: Company[] = [
     name: "SMaid",
     category: "Retail, Queue & Logistics Support",
     status: "Featured Company",
-    badge: "A FonAI Labs Company",
+    badge: "A Fonia Labs Company",
     tagline: "Making supermarket shopping, queueing, and delivery support easier.",
     description:
       "SMaid is built to support supermarkets, shoppers, and delivery workflows by improving how people queue, shop, request support, and manage logistics around retail experiences.",
@@ -156,7 +156,7 @@ export const companies: Company[] = [
     name: "Dokito",
     category: "Health Technology",
     status: "Featured Company",
-    badge: "A FonAI Labs Company",
+    badge: "A Fonia Labs Company",
     tagline: "Digital health access, support, and care navigation.",
     description:
       "Dokito is a health technology platform designed to improve access to health support, health records, facility discovery, emergency flows, and digital care experiences.",
@@ -204,7 +204,7 @@ export const companies: Company[] = [
     name: "ContractFeed",
     category: "Contract & Opportunity Intelligence",
     status: "Growth Venture",
-    badge: "A FonAI Labs Venture",
+    badge: "A Fonia Labs Venture",
     tagline: "Helping businesses discover and track contract opportunities.",
     description:
       "ContractFeed helps businesses, suppliers, and professionals discover contract opportunities, procurement information, and business openings in a more organized way.",
@@ -241,7 +241,7 @@ export const companies: Company[] = [
     name: "StormBridge",
     category: "Weather & Emergency Intelligence",
     status: "Growth Venture",
-    badge: "A FonAI Labs Venture",
+    badge: "A Fonia Labs Venture",
     tagline: "Weather intelligence and disaster preparedness support.",
     description:
       "StormBridge is built for weather intelligence, disaster preparedness, risk awareness, emergency reporting, and community support during environmental or safety-related events.",
@@ -287,7 +287,7 @@ export const companies: Company[] = [
     name: "Seek",
     category: "Opportunity Discovery",
     status: "Growth Venture",
-    badge: "A FonAI Labs Venture",
+    badge: "A Fonia Labs Venture",
     tagline: "Discover, track, and act on useful opportunities.",
     description:
       "Seek is an opportunity discovery system designed to help users find, organize, and act on opportunities across education, work, business, funding, and personal growth.",
@@ -329,7 +329,7 @@ export const companies: Company[] = [
     name: "ComplyIQ",
     category: "Compliance & Risk Intelligence",
     status: "Growth Venture",
-    badge: "A FonAI Labs Venture",
+    badge: "A Fonia Labs Venture",
     tagline: "Helping businesses understand compliance, risk, and digital responsibility.",
     description:
       "ComplyIQ is built to support businesses with compliance awareness, website risk intelligence, digital operations review, and structured guidance for safer business systems.",
@@ -369,7 +369,7 @@ export const companies: Company[] = [
     name: "UnilagFoodSpots",
     category: "Campus & Community Product",
     status: "Community Product",
-    badge: "A FonAI Labs Product",
+    badge: "A Fonia Labs Product",
     tagline: "Find food spots around UNILAG.",
     description:
       "UnilagFoodSpots is a community product that helps students and visitors discover food spots around the University of Lagos.",
@@ -404,7 +404,7 @@ export const companies: Company[] = [
     name: "Deadline Dungeon",
     category: "Game & Productivity Experience",
     status: "Labs Product",
-    badge: "A FonAI Labs Project",
+    badge: "A Fonia Labs Project",
     tagline: "A game-inspired experience built around deadlines and focus.",
     description:
       "Deadline Dungeon is a creative product that turns deadlines, focus, and productivity pressure into a game-like experience.",
@@ -440,7 +440,7 @@ export const companies: Company[] = [
     name: "SystemGuardian",
     category: "System Protection & Performance",
     status: "Labs Product",
-    badge: "A FonAI Labs Project",
+    badge: "A Fonia Labs Project",
     tagline: "Protecting computers from overload, slowdown, and performance failure.",
     description:
       "SystemGuardian is a system protection concept designed to monitor device performance, detect resource pressure, and help prevent CPU, memory, or system overload.",
@@ -490,11 +490,11 @@ export const tiers: Tier[] = [
 export const tierMeta: Record<Tier, { label: string; description: string }> = {
   "Core Company": {
     label: "Core Company",
-    description: "The software production engine that builds and powers the FonAI Labs ecosystem."
+    description: "The software production engine that builds and powers the Fonia Labs ecosystem."
   },
   "Featured Company": {
     label: "Featured Companies",
-    description: "Active companies leading the FonAI Labs ecosystem across key industries."
+    description: "Active companies leading the Fonia Labs ecosystem across key industries."
   },
   "Growth Venture": {
     label: "Growth Ventures",
@@ -506,7 +506,7 @@ export const tierMeta: Record<Tier, { label: string; description: string }> = {
   },
   "Labs Product": {
     label: "Labs Products",
-    description: "Creative experiments and tools built under the FonAI Labs innovation umbrella."
+    description: "Creative experiments and tools built under the Fonia Labs innovation umbrella."
   }
 };
 
