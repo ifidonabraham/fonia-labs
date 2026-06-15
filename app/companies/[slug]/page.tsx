@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { companies, getCompany } from "../../../data/companies";
 import { OCore } from "../../../components/OCore";
+import { BrandBadge } from "../../../components/BrandBadge";
 
 export function generateStaticParams() {
   return companies.map((item) => ({ slug: item.slug }));
@@ -204,7 +205,7 @@ export default function CompanyPage({ params }: { params: { slug: string } }) {
       {/* Fonia Labs badge */}
       <section className="section tight">
         <div className="container">
-          <div className="footer-badge">{company.badge}</div>
+          <BrandBadge label={company.badge} uid={`badge-${company.slug}`} />
         </div>
       </section>
     </main>

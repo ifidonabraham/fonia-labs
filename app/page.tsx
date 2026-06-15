@@ -75,7 +75,7 @@ export default function Home() {
             <span className="orbit-dot d5" />
             <span className="orbit-dot d6" />
             <div className="orbit-core">
-              <OCore size={150} />
+              <OCore size={150} animation="full" uid="hero" />
             </div>
           </div>
         </div>

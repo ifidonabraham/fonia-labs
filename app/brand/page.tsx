@@ -1,0 +1,180 @@
+import type { Metadata } from "next";
+import { PageHero } from "../../components/PageHero";
+import { SectionHeader } from "../../components/SectionHeader";
+import { BrandMark } from "../../components/BrandMark";
+import { BrandBadge } from "../../components/BrandBadge";
+import { BrandAssetPreview } from "../../components/BrandAssetPreview";
+import { CTA } from "../../components/CTA";
+
+export const metadata: Metadata = {
+  title: "Brand Kit",
+  description:
+    "The Fonia Labs brand system: the O-core origin mark, logo lockups, endorsement badges, colors, and usage guidance."
+};
+
+const palette = [
+  { name: "Background", hex: "#0B1120" },
+  { name: "Primary Blue", hex: "#2563EB" },
+  { name: "Accent Cyan", hex: "#38BDF8" },
+  { name: "Text", hex: "#F8FAFC" },
+  { name: "Muted", hex: "#6B7280" }
+];
+
+const dos = [
+  "Keep clear space around the mark equal to the height of the core.",
+  "Use the light logo on dark backgrounds and the dark logo on light backgrounds.",
+  "Let the core stay the brightest point in the mark.",
+  "Pair the wordmark with Poppins for supporting type."
+];
+
+const donts = [
+  "Don't recolor the core away from the blue–cyan origin glow.",
+  "Don't stretch, rotate, or distort the lockup.",
+  "Don't add robot heads, brains, flasks, or AI-only motifs.",
+  "Don't place the light logo on light backgrounds (or vice versa)."
+];
+
+export default function BrandPage() {
+  return (
+    <main>
+      <PageHero
+        eyebrow="Brand"
+        title="Fonia Labs Brand Kit"
+        text="The visual system behind Fonia Labs — built around the O-core origin mark."
+        support="Use these assets and guidelines to represent Fonia Labs and its companies consistently across products, sites, and materials."
+      />
+
+      {/* The O-core */}
+      <section className="section">
+        <div className="container split">
+          <div>
+            <div className="eyebrow">The O-Core</div>
+            <h2>The origin where ideas begin.</h2>
+            <p className="lead">
+              The O-core represents the origin point — the center from which ideas are
+              formed, refined, and grown into companies. Rotating rings surround a stable,
+              glowing core: motion on the outside, a constant origin at the center.
+            </p>
+          </div>
+          <div className="card" style={{ display: "grid", placeItems: "center", minHeight: 280 }}>
+            <BrandMark variant="mark" size={180} animation="full" uid="kit-hero" />
+          </div>
+        </div>
+      </section>
+
+      {/* Logo lockups */}
+      <section className="section tight">
+        <div className="container">
+          <SectionHeader
+            eyebrow="Logo System"
+            title="Marks & lockups."
+            text="The full lockup pairs the O-core with the Fonia wordmark and a spaced LABS sub-line. The mark can also stand alone."
+          />
+          <div className="grid cols-3" style={{ marginBottom: 24, alignItems: "center" }}>
+            <div className="card" style={{ display: "grid", placeItems: "center", minHeight: 150 }}>
+              <BrandMark variant="horizontal" size={56} uid="kit-h" />
+            </div>
+            <div className="card" style={{ display: "grid", placeItems: "center", minHeight: 150 }}>
+              <BrandMark variant="stacked" size={64} uid="kit-s" />
+            </div>
+            <div className="card" style={{ display: "grid", placeItems: "center", minHeight: 150 }}>
+              <BrandMark variant="mark" size={72} uid="kit-m" />
+            </div>
+          </div>
+          <div className="grid cols-4">
+            <BrandAssetPreview src="/logos/fonia-labs-logo.svg" name="Primary Logo" fileLabel="fonia-labs-logo.svg" />
+            <BrandAssetPreview src="/logos/fonia-labs-logo-light.svg" name="Light Logo (on dark)" fileLabel="fonia-labs-logo-light.svg" />
+            <BrandAssetPreview src="/logos/fonia-labs-logo-dark.svg" name="Dark Logo (on light)" fileLabel="fonia-labs-logo-dark.svg" surface="light" />
+            <BrandAssetPreview src="/logos/fonia-labs-mark.svg" name="Icon / Mark" fileLabel="fonia-labs-mark.svg" />
+          </div>
+        </div>
+      </section>
+
+      {/* Badges */}
+      <section className="section tight">
+        <div className="container">
+          <SectionHeader
+            eyebrow="Endorsement Badges"
+            title="Badges for companies & products."
+            text="Every company and product in the ecosystem carries a consistent badge."
+          />
+          <div className="chips" style={{ gap: 16, marginBottom: 24 }}>
+            <BrandBadge variant="company" />
+            <BrandBadge variant="product" />
+            <BrandBadge variant="ecosystem" />
+          </div>
+          <div className="grid cols-3">
+            <BrandAssetPreview src="/badges/a-fonia-labs-company.svg" name="Company Badge" fileLabel="a-fonia-labs-company.svg" />
+            <BrandAssetPreview src="/badges/a-fonia-labs-product.svg" name="Product Badge" fileLabel="a-fonia-labs-product.svg" />
+            <BrandAssetPreview src="/og/fonia-labs-og.svg" name="Social / OG Image" fileLabel="fonia-labs-og.svg" />
+          </div>
+        </div>
+      </section>
+
+      {/* Colors */}
+      <section className="section tight">
+        <div className="container">
+          <SectionHeader eyebrow="Color" title="Palette." />
+          <div className="grid cols-4">
+            {palette.map((color) => (
+              <div className="swatch" key={color.hex}>
+                <div className="swatch-chip" style={{ background: color.hex }} />
+                <div className="swatch-body">
+                  <p className="swatch-name">{color.name}</p>
+                  <p className="swatch-hex">{color.hex}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Typography */}
+      <section className="section tight">
+        <div className="container split">
+          <div>
+            <div className="eyebrow">Typography</div>
+            <h2>Poppins.</h2>
+            <p>Clean, modern, and professional. Bold / SemiBold / Medium / Regular.</p>
+          </div>
+          <div className="card">
+            <div style={{ fontSize: 56, fontWeight: 700, letterSpacing: "-0.03em" }}>Aa</div>
+            <p className="mt-sm">The quick brown fox builds companies. 0123456789</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Usage */}
+      <section className="section tight">
+        <div className="container">
+          <SectionHeader eyebrow="Usage" title="Do & don't." />
+          <div className="usage-grid">
+            <div className="usage-col">
+              <h3>Do</h3>
+              <ul className="usage-list do">
+                {dos.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="usage-col">
+              <h3>Don't</h3>
+              <ul className="usage-list dont">
+                {donts.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTA
+        title="Build with the Fonia Labs identity."
+        text="Explore the ecosystem or partner with a company under Fonia Labs."
+        primary={{ label: "View Companies", href: "/companies" }}
+        secondary={{ label: "Collaborate", href: "/collaborate" }}
+      />
+    </main>
+  );
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80" fill="none" role="img" aria-label="Fonia Labs (dark, for light backgrounds)">
+  <defs>
+    <linearGradient id="ring" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#334155"/>
+      <stop offset="0.5" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="45%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(8,8)">
+    <path d="M32 7 A25 25 0 0 1 57 32" stroke="url(#ring)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M32 57 A25 25 0 0 1 7 32" stroke="url(#ring)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M14 20 A21 21 0 0 1 50 16" stroke="#64748b" stroke-opacity="0.6" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M44 20 A17 17 0 0 1 44 44" stroke="#2563eb" stroke-opacity="0.7" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="32" cy="32" r="9" fill="url(#core)"/>
+  </g>
+  <text x="86" y="47" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="-1.6">
+    <tspan fill="#0b1120">Fon</tspan><tspan fill="#2563eb">ia</tspan>
+  </text>
+  <text x="88" y="66" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="6" fill="#6b7280">LABS</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" role="img" aria-label="Fonia Labs mark">
+  <defs>
+    <linearGradient id="ring" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e2e8f0"/>
+      <stop offset="0.5" stop-color="#94a3b8"/>
+      <stop offset="1" stop-color="#475569"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="45%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="20" fill="url(#glow)"/>
+  <path d="M32 7 A25 25 0 0 1 57 32" stroke="url(#ring)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M32 57 A25 25 0 0 1 7 32" stroke="url(#ring)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M14 20 A21 21 0 0 1 50 16" stroke="#cbd5e1" stroke-opacity="0.45" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M44 20 A17 17 0 0 1 44 44" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="9" fill="url(#core)"/>
+  <circle cx="32" cy="32" r="9" fill="none" stroke="#7dd3fc" stroke-opacity="0.35" stroke-width="1.5"/>
+</svg>

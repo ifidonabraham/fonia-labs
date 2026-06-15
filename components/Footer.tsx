@@ -6,7 +6,8 @@ const explore = [
   ["About", "/about"],
   ["Collaborate", "/collaborate"],
   ["Updates", "/updates"],
-  ["Contact", "/contact"]
+  ["Contact", "/contact"],
+  ["Brand Kit", "/brand"]
 ];
 
 const ecosystem = [
