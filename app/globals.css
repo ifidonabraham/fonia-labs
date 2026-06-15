@@ -941,3 +941,73 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
 @media (max-width: 760px) {
   .usage-grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- Premium company card (spotlight) ---------- */
+
+.company-card--spot { position: relative; overflow: hidden; isolation: isolate; }
+.company-card--spot .cc-body { position: relative; z-index: 1; display: flex; flex-direction: column; flex: 1; }
+.cc-spot {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  opacity: 0; transition: opacity 0.3s ease;
+  background: radial-gradient(240px circle at var(--mx, 50%) var(--my, 0%), rgba(56, 189, 248, 0.16), transparent 60%);
+}
+.company-card--spot:hover .cc-spot { opacity: 1; }
+.cc-edge {
+  position: absolute; top: 0; left: 0; right: 0; height: 2px; z-index: 2; pointer-events: none;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
+}
+.company-card--spot:hover .cc-edge { transform: scaleX(1); }
+
+/* ---------- Campaign marquee ---------- */
+
+.mq { position: relative; overflow: hidden; padding: 6px 0; }
+.mq-track {
+  display: flex; gap: 20px; width: max-content; padding: 8px 24px;
+  animation: mq-scroll 64s linear infinite; will-change: transform;
+}
+.mq:hover .mq-track, .mq:focus-within .mq-track { animation-play-state: paused; }
+@keyframes mq-scroll { to { transform: translateX(-50%); } }
+
+.mq-card {
+  position: relative; flex: 0 0 auto; width: 248px; aspect-ratio: 4 / 5;
+  border-radius: 18px; overflow: hidden; border: 1px solid var(--line);
+  background: var(--card-solid);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.mq-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.mq-card:hover { transform: translateY(-6px); border-color: var(--glow); box-shadow: 0 24px 50px -24px rgba(56, 189, 248, 0.5); }
+.mq-card:hover img { transform: scale(1.06); }
+.mq-overlay {
+  position: absolute; inset: auto 0 0 0; padding: 14px 16px;
+  display: flex; flex-direction: column; gap: 2px;
+  background: linear-gradient(transparent, rgba(7, 11, 22, 0.9));
+}
+.mq-name { font-weight: 700; color: #fff; font-size: 15px; }
+.mq-cta { font-size: 12.5px; color: var(--cyan); opacity: 0; transform: translateY(4px); transition: opacity 0.25s ease, transform 0.25s ease; }
+.mq-card:hover .mq-cta { opacity: 1; transform: none; }
+.mq-fade { position: absolute; top: 0; bottom: 0; width: 90px; pointer-events: none; z-index: 3; }
+.mq-fade-l { left: 0; background: linear-gradient(90deg, var(--bg), transparent); }
+.mq-fade-r { right: 0; background: linear-gradient(270deg, var(--bg), transparent); }
+
+/* ---------- Scroll reveal ---------- */
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ---------- Accessibility ---------- */
+
+a:focus-visible, button:focus-visible, .btn:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible,
+.mq-card:focus-visible, .company-card a:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mq-track { animation: none; }
+  .mq { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .mq-card, .mq-card img, .cc-spot, .cc-edge, .mq-cta { transition: none; }
+}
