@@ -1,8 +1,26 @@
-export function OCore({ size = 40 }: { size?: number }) {
-  const id = "oc";
+type OCoreAnimation = "none" | "subtle" | "full";
+
+type Props = {
+  size?: number;
+  /** Ring rotation intensity. "subtle" suits the header; "full" suits heroes. */
+  animation?: OCoreAnimation;
+  /** Unique suffix for gradient/filter ids when several marks share a page. */
+  uid?: string;
+};
+
+/**
+ * O-Core — the Fonia Labs origin mark.
+ *
+ * The "O" is the origin: the point where ideas begin and companies grow.
+ * Three broken rings surround a stable, glowing core orb. The rings sit in
+ * named groups so they can rotate slowly and independently via CSS, while the
+ * core stays fixed. Animation is opt-in and respects prefers-reduced-motion.
+ */
+export function OCore({ size = 40, animation = "none", uid = "oc" }: Props) {
+  const id = uid;
   return (
     <svg
-      className="ocore"
+      className={`ocore ocore--${animation}`}
       width={size}
       height={size}
       viewBox="0 0 64 64"
@@ -29,42 +47,48 @@ export function OCore({ size = 40 }: { size?: number }) {
       </defs>
 
       {/* Outer broken ring — gaps at NW / NE / SE / SW */}
-      <circle
-        cx="32" cy="32" r="28"
-        stroke="#cbd5e1"
-        strokeWidth="3.2"
-        strokeOpacity="0.55"
-        strokeLinecap="round"
-        strokeDasharray="38.5 5.5"
-        transform="rotate(-45 32 32)"
-      />
+      <g className="oc-ring oc-ring--outer">
+        <circle
+          cx="32" cy="32" r="28"
+          stroke="#cbd5e1"
+          strokeWidth="3.2"
+          strokeOpacity="0.55"
+          strokeLinecap="round"
+          strokeDasharray="38.5 5.5"
+          transform="rotate(-45 32 32)"
+        />
+      </g>
 
       {/* Mid ring */}
-      <circle
-        cx="32" cy="32" r="21"
-        stroke="#94a3b8"
-        strokeWidth="2.4"
-        strokeOpacity="0.45"
-        strokeLinecap="round"
-        strokeDasharray="28.5 4.5"
-        transform="rotate(-45 32 32)"
-      />
+      <g className="oc-ring oc-ring--mid">
+        <circle
+          cx="32" cy="32" r="21"
+          stroke="#94a3b8"
+          strokeWidth="2.4"
+          strokeOpacity="0.45"
+          strokeLinecap="round"
+          strokeDasharray="28.5 4.5"
+          transform="rotate(-45 32 32)"
+        />
+      </g>
 
       {/* Inner ring — cyan tint */}
-      <circle
-        cx="32" cy="32" r="14"
-        stroke="#38bdf8"
-        strokeWidth="1.8"
-        strokeOpacity="0.5"
-        strokeLinecap="round"
-        strokeDasharray="18 3.8"
-        transform="rotate(-45 32 32)"
-      />
+      <g className="oc-ring oc-ring--inner">
+        <circle
+          cx="32" cy="32" r="14"
+          stroke="#38bdf8"
+          strokeWidth="1.8"
+          strokeOpacity="0.5"
+          strokeLinecap="round"
+          strokeDasharray="18 3.8"
+          transform="rotate(-45 32 32)"
+        />
+      </g>
 
       {/* Ambient halo behind orb */}
-      <circle cx="32" cy="32" r="12" fill={`url(#${id}-halo)`} />
+      <circle className="oc-halo" cx="32" cy="32" r="12" fill={`url(#${id}-halo)`} />
 
-      {/* Core orb */}
+      {/* Core orb (stable) */}
       <circle cx="32" cy="32" r="7.5" fill={`url(#${id}-orb)`} filter={`url(#${id}-glow)`} />
 
       {/* Specular highlight */}

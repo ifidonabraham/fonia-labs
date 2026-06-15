@@ -4,7 +4,7 @@ import { OCore } from "./OCore";
 export function Logo({ size = 38 }: { size?: number }) {
   return (
     <Link href="/" className="logo-lockup" aria-label="Fonia Labs — home">
-      <OCore size={size} />
+      <OCore size={size} animation="subtle" uid="logo" />
       <span className="logo-text">
         <span className="logo-word">
           Fon<span className="lw-blue">ia</span>
