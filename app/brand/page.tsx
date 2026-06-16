@@ -169,6 +169,125 @@ export default function BrandPage() {
         </div>
       </section>
 
+      {/* Site Badge Embed */}
+      <section className="section tight">
+        <div className="container">
+          <SectionHeader
+            eyebrow="Site Badge"
+            title="Add the Fonia Labs badge to your site."
+            text="Every company and product under Fonia Labs can display this badge. It adapts to any background and requires one line of code."
+          />
+
+          {/* Live preview */}
+          <div className="badge-preview-row">
+            <div className="badge-preview-swatch dark-swatch">
+              <div className="eyebrow" style={{ marginBottom: 12, fontSize: 10 }}>Dark surface</div>
+              <a
+                href="https://fonia-labs.vercel.app"
+                className="fonia-site-badge"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="A Fonia Labs Company Fonia Labs"
+              >
+                <svg width="22" height="22" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                  <circle cx="32" cy="32" r="28" stroke="#38bdf8" strokeWidth="3.2" strokeOpacity="0.55" strokeLinecap="round" strokeDasharray="38.5 5.5" transform="rotate(-45 32 32)" />
+                  <circle cx="32" cy="32" r="21" stroke="#94a3b8" strokeWidth="2.4" strokeOpacity="0.45" strokeLinecap="round" strokeDasharray="28.5 4.5" transform="rotate(-45 32 32)" />
+                  <circle cx="32" cy="32" r="14" stroke="#38bdf8" strokeWidth="1.8" strokeOpacity="0.5" strokeLinecap="round" strokeDasharray="18 3.8" transform="rotate(-45 32 32)" />
+                  <circle cx="32" cy="32" r="7.5" fill="#38bdf8" fillOpacity="0.9" />
+                  <ellipse cx="29.5" cy="28.5" rx="2.8" ry="1.8" fill="white" fillOpacity="0.45" transform="rotate(-30 29.5 28.5)" />
+                </svg>
+                <span className="fsb-text">
+                  <span className="fsb-label">A Fonia Labs Company</span>
+                  <span className="fsb-wordmark">
+                    <span className="fsb-fon">Fon</span><span className="fsb-ia">ia</span>
+                    <span className="fsb-labs">LABS</span>
+                  </span>
+                </span>
+              </a>
+            </div>
+            <div className="badge-preview-swatch light-swatch">
+              <div className="eyebrow" style={{ marginBottom: 12, fontSize: 10, color: "#64748b" }}>Light surface</div>
+              <a
+                href="https://fonia-labs.vercel.app"
+                className="fonia-site-badge fonia-site-badge--light"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="A Fonia Labs Company Fonia Labs"
+              >
+                <svg width="22" height="22" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                  <circle cx="32" cy="32" r="28" stroke="#38bdf8" strokeWidth="3.2" strokeOpacity="0.7" strokeLinecap="round" strokeDasharray="38.5 5.5" transform="rotate(-45 32 32)" />
+                  <circle cx="32" cy="32" r="21" stroke="#94a3b8" strokeWidth="2.4" strokeOpacity="0.5" strokeLinecap="round" strokeDasharray="28.5 4.5" transform="rotate(-45 32 32)" />
+                  <circle cx="32" cy="32" r="14" stroke="#38bdf8" strokeWidth="1.8" strokeOpacity="0.6" strokeLinecap="round" strokeDasharray="18 3.8" transform="rotate(-45 32 32)" />
+                  <circle cx="32" cy="32" r="7.5" fill="#2563eb" />
+                  <ellipse cx="29.5" cy="28.5" rx="2.8" ry="1.8" fill="white" fillOpacity="0.55" transform="rotate(-30 29.5 28.5)" />
+                </svg>
+                <span className="fsb-text">
+                  <span className="fsb-label" style={{ color: "#94a3b8" }}>A Fonia Labs Company</span>
+                  <span className="fsb-wordmark">
+                    <span className="fsb-fon" style={{ color: "#0f172a" }}>Fon</span><span className="fsb-ia">ia</span>
+                    <span className="fsb-labs" style={{ color: "#64748b" }}>LABS</span>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          {/* Embed code blocks */}
+          <div className="embed-blocks">
+            <div className="embed-block">
+              <div className="eb-head">
+                <span className="eb-tag">JS Embed</span>
+                <span className="eb-desc">One line — auto-detects dark/light, supports floating or inline placement</span>
+              </div>
+              <pre className="code-block"><code>{`<!-- Floating badge (bottom-right corner) -->
+<script src="https://fonia-labs.vercel.app/embed/fonia-badge.js"></script>
+
+<!-- Bottom-left corner -->
+<script src="https://fonia-labs.vercel.app/embed/fonia-badge.js"
+        data-position="bottom-left"></script>
+
+<!-- Inline in your footer (renders in place) -->
+<script src="https://fonia-labs.vercel.app/embed/fonia-badge.js"
+        data-position="inline"
+        data-theme="dark"></script>`}</code></pre>
+            </div>
+
+            <div className="embed-block">
+              <div className="eb-head">
+                <span className="eb-tag">HTML Only</span>
+                <span className="eb-desc">No JavaScript required — paste the full snippet from the file below</span>
+              </div>
+              <pre className="code-block"><code>{`<!-- Download and reference the full snippet:
+     https://fonia-labs.vercel.app/embed/fonia-badge-inline.html
+
+     Then add to your footer:
+-->
+<a href="https://fonia-labs.vercel.app"
+   class="fonia-badge"
+   target="_blank" rel="noopener noreferrer">
+  <!-- SVG + text from the snippet file -->
+</a>`}</code></pre>
+            </div>
+          </div>
+
+          <div className="embed-options-grid">
+            {[
+              { opt: 'data-position="bottom-right"', desc: "Floating — bottom-right corner (default)" },
+              { opt: 'data-position="bottom-left"',  desc: "Floating — bottom-left corner" },
+              { opt: 'data-position="inline"',        desc: "Renders where the script tag is placed" },
+              { opt: 'data-theme="auto"',             desc: "Follows system dark/light preference (default)" },
+              { opt: 'data-theme="dark"',             desc: "Always dark pill — for light-themed sites" },
+              { opt: 'data-theme="light"',            desc: "Always light pill — for dark-themed sites" },
+            ].map((row) => (
+              <div className="eo-row" key={row.opt}>
+                <code className="eo-opt">{row.opt}</code>
+                <span className="eo-desc">{row.desc}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section">
         <div className="container">

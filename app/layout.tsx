@@ -27,14 +27,24 @@ export const metadata: Metadata = {
   creator: "Ifidon Abraham",
   openGraph: {
     type: "website",
-    title: "Fonia Labs | Where Ideas Become Companies",
+    url: "https://fonia-labs.vercel.app",
+    siteName: "Fonia Labs",
     description,
-    siteName: "Fonia Labs"
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Fonia Labs — Where Ideas Become Companies"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fonia Labs | Where Ideas Become Companies",
-    description
+    site: "@fonialabs",
+    creator: "@ifidonabraham",
+    description,
+    images: ["/opengraph-image"]
   },
   icons: {
     icon: "/favicon.svg"
