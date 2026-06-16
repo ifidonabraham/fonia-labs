@@ -339,15 +339,23 @@ export default function FonTechPage() {
           />
           <div className="shot-grid">
             {[
-              { src: "/screenshots/fontech/shot-1.png",       label: "FonTech website" },
-              { src: "/screenshots/portfolio/shot-1.png",      label: "Portfolio website" },
-              { src: "/screenshots/omegaestate/shot-1.png",    label: "OmegaEstate" },
-              { src: "/screenshots/dokito/shot-1.png",         label: "Dokito" },
-              { src: "/screenshots/smaid/shot-1.png",          label: "SMaid" },
-              { src: "/screenshots/contractfeed/shot-1.png",   label: "ContractFeed" },
-              { src: "/screenshots/stormbridge/shot-1.png",    label: "StormBridge" },
-            ].map(({ src, label }) => (
-              <div className="shot" key={label} style={{ padding: 0, overflow: "hidden" }}>
+              { src: "/screenshots/fontech/shot-1.png",     label: "FonTech website",  href: "https://fontech-site.vercel.app" },
+              { src: "/screenshots/portfolio/shot-1.png",   label: "Portfolio website", href: "https://portfolio2007.vercel.app" },
+              { src: "/screenshots/omegaestate/shot-1.png", label: "OmegaEstate",       href: "https://omegaestate.vercel.app" },
+              { src: "/screenshots/dokito/shot-1.png",      label: "Dokito",            href: "https://dokito.vercel.app" },
+              { src: "/screenshots/smaid/shot-1.png",       label: "SMaid",             href: "https://smaid.vercel.app" },
+              { src: "/screenshots/contractfeed/shot-1.png",label: "ContractFeed",      href: "https://contractfeed.vercel.app" },
+              { src: "/screenshots/stormbridge/shot-1.png", label: "StormBridge",       href: "https://stormbrigde.vercel.app" },
+            ].map(({ src, label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shot shot-link"
+                style={{ padding: 0, overflow: "hidden" }}
+                aria-label={`Visit ${label}`}
+              >
                 <Image
                   src={src}
                   alt={label}
@@ -355,7 +363,7 @@ export default function FonTechPage() {
                   height={800}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
-              </div>
+              </a>
             ))}
           </div>
         </div>

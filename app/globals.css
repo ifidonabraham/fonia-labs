@@ -581,6 +581,16 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
   font-size: 13px;
   font-weight: 500;
 }
+.shot-link {
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  text-decoration: none;
+}
+.shot-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
 
 .kv { display: grid; gap: 14px; }
 .kv-row { display: flex; gap: 14px; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--line); }
