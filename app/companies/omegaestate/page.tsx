@@ -107,7 +107,7 @@ export default function OmegaEstatePage() {
             <div className="actions" style={{ marginTop: 24 }}>
               <a
                 className="btn primary"
-                href="https://omegaestate.vercel.app"
+                href="https://omegaestate.homes"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -331,7 +331,7 @@ export default function OmegaEstatePage() {
             <div className="actions" style={{ marginTop: 18 }}>
               <a
                 className="btn primary"
-                href="https://omegaestate.vercel.app"
+                href="https://omegaestate.homes"
                 target="_blank"
                 rel="noopener noreferrer"
               >

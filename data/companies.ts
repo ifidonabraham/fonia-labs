@@ -85,7 +85,7 @@ export const companies: Company[] = [
     tagline: "Property discovery and real estate technology.",
     description:
       "OmegaEstate is a property technology company focused on making real estate discovery, property listings, and property management more organized and accessible.",
-    url: "https://omegaestate.vercel.app",
+    url: "https://omegaestate.homes",
     tier: "Featured Company",
     problem: "Finding property, managing listings, and connecting buyers or renters with agents is often scattered, slow, and unstructured.",
     solution:

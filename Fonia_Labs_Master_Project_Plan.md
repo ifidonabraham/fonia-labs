@@ -474,7 +474,7 @@ On the homepage, Seek should be in the main featured company section.
 These URLs were discussed. Some may contain typos from the original conversation and should be verified before final launch.
 
 - **FonTech:** `https://fontech-site.vercel.app`
-- **OmegaEstate:** `https://omegaestate.vercel.app`
+- **OmegaEstate:** `https://omegaestate.homes`
 - **Seek:** `https://seek-beryl.vercel.app`
 - **Deadline Dungeon:** `https://deadline-dungeon-phi.vercel.app`
 - **UnilagFoodSpots:** `https://unilagfoodspots.vercel.app`

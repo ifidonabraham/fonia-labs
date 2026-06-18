@@ -8,7 +8,7 @@ const OUT = join(__dirname, "..", "public", "screenshots");
 
 const sites = [
   { slug: "fontech",         url: "https://fontech-site.vercel.app",         shots: 7 },
-  { slug: "omegaestate",     url: "https://omegaestate.vercel.app",          shots: 6 },
+  { slug: "omegaestate",     url: "https://omegaestate.homes",               shots: 6 },
   { slug: "smaid",           url: "https://smaid.vercel.app",                shots: 6 },
   { slug: "dokito",          url: "https://dokito.vercel.app",               shots: 7 },
   { slug: "seek",            url: "https://seek-beryl.vercel.app",           shots: 7 },

@@ -341,7 +341,7 @@ export default function FonTechPage() {
             {[
               { src: "/screenshots/fontech/shot-1.png",     label: "FonTech website",  href: "https://fontech-site.vercel.app" },
               { src: "/screenshots/portfolio/shot-1.png",   label: "Portfolio website", href: "https://portfolio2007.vercel.app" },
-              { src: "/screenshots/omegaestate/shot-1.png", label: "OmegaEstate",       href: "https://omegaestate.vercel.app" },
+              { src: "/screenshots/omegaestate/shot-1.png", label: "OmegaEstate",       href: "https://omegaestate.homes" },
               { src: "/screenshots/dokito/shot-1.png",      label: "Dokito",            href: "https://dokito.vercel.app" },
               { src: "/screenshots/smaid/shot-1.png",       label: "SMaid",             href: "https://smaid.vercel.app" },
               { src: "/screenshots/contractfeed/shot-1.png",label: "ContractFeed",      href: "https://contractfeed.vercel.app" },
