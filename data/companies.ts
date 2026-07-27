@@ -122,7 +122,7 @@ export const companies: Company[] = [
     tagline: "Making supermarket shopping, queueing, and delivery support easier.",
     description:
       "SMaid is built to support supermarkets, shoppers, and delivery workflows by improving how people queue, shop, request support, and manage logistics around retail experiences.",
-    url: "https://smaid.vercel.app",
+    url: "#companies",
     tier: "Featured Company",
     problem:
       "Supermarket shopping can become inefficient because of long queues, crowded spaces, poor service coordination, and limited delivery support.",
