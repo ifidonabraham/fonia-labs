@@ -47,7 +47,11 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"]
   },
   icons: {
-    icon: "/favicon.svg"
+    icon: [
+      { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" }
+    ],
+    apple: "/apple-touch-icon.png"
   }
 };
 
