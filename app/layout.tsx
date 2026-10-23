@@ -51,10 +51,31 @@ export const metadata: Metadata = {
   }
 };
 
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Fonia Labs",
+  "url": "https://fonialabs.tech",
+  "logo": "https://fonialabs.tech/logos/fonia-labs-logo.svg",
+  "sameAs": [
+    "https://www.linkedin.com/in/ifidonabraham"
+  ],
+  "description":
+    "Fonia Labs is a global innovation group building companies, platforms, and products that solve real-world problems.",
+  "founder": {
+    "@type": "Person",
+    "name": "Ifidon Abraham"
+  }
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
