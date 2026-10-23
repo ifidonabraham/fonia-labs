@@ -9,7 +9,7 @@ const description =
   "Fonia Labs is a global innovation group building companies, platforms, and products that solve real-world problems.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fonia-labs.vercel.app"),
+  metadataBase: new URL("https://fonialabs.tech"),
   title: {
     default: "Fonia Labs | Where Ideas Become Companies",
     template: "%s | Fonia Labs"
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   creator: "Ifidon Abraham",
   openGraph: {
     type: "website",
-    url: "https://fonia-labs.vercel.app",
+    url: "https://fonialabs.tech",
     siteName: "Fonia Labs",
     description,
     images: [
